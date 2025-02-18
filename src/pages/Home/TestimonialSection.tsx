@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Box, Container, IconButton, Stack, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
-
 import "swiper/css";
 import quotes from "/assets/img/icon/quotes-sign.png";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
@@ -12,47 +11,22 @@ interface Testimonial {
   id: number;
   text: string;
   role: string;
+  backgrcolor?: string;
 }
+
 const PersonalCards = () => {
   const { t } = useTranslation();
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
 
   useEffect(() => {
-    setTestimonials([
-      {
-        id: 0,
-        text: t("personalCards.testimonials.0.text"),
-        role: t("personalCards.testimonials.0.role"),
-      },
-      {
-        id: 1,
-        text: t("personalCards.testimonials.1.text"),
-        role: t("personalCards.testimonials.1.role"),
-      },
-      {
-        id: 2,
-        text: t("personalCards.testimonials.2.text"),
-        role: t("personalCards.testimonials.2.role"),
-      },
-      {
-        id: 3,
-        text: t("personalCards.testimonials.3.text"),
-        role: t("personalCards.testimonials.3.role"),
-      },
-      {
-        id: 4,
-        text: t("personalCards.testimonials.4.text"),
-        role: t("personalCards.testimonials.4.role"),
-      },
-      {
-        id: 5,
-        text: t("personalCards.testimonials.5.text"),
-        role: t("personalCards.testimonials.5.role"),
-      },
-    ]);
-
-    console.log("Testimonial 5 Text:", t("personalCards.testimonials.5.text"));
-    console.log("Testimonial 5 Role:", t("personalCards.testimonials.5.role"));
+    // استرجاع المصفوفة كاملة من ملف الترجمة مع returnObjects: true
+    const testimonialsData = t("personalCards.testimonials", { returnObjects: true }) as Testimonial[];
+    // يمكن إضافة خاصية id إذا لم تكن موجودة مسبقًا
+    const testimonialsWithId = testimonialsData.map((item, index) => ({
+      ...item,
+      id: index,
+    }));
+    setTestimonials(testimonialsWithId);
   }, [t]);
 
   const primaryTheme = "#2D0A31";
@@ -145,7 +119,8 @@ const PersonalCards = () => {
             <SwiperSlide key={testimonial.id}>
               <Box
                 sx={{
-                  backgroundColor: secondaryTheme,
+                  // تحديد لون الخلفية بناءً على الخاصية backgrcolor
+                  backgroundColor: testimonial.backgrcolor || secondaryTheme,
                   width: { xs: "85%", sm: "80%" },
                   py: { xs: 5, sm: 8, md: 10 },
                   px: { xs: 2, sm: 8, md: 8 },
