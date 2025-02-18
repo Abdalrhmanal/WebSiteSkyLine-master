@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "motion/react";
 import { useTypewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
 const SliderArea: React.FC = () => {
   const { t, i18n } = useTranslation();
+  console.log(i18n.dir());
   const [text] = useTypewriter({
     words: [t("slider.title")],
     loop: true,
@@ -13,33 +13,25 @@ const SliderArea: React.FC = () => {
     deleteSpeed: 50,
     delaySpeed: 1000,
   });
-  const [textAlignValue, setTextAlignValue] = useState<"left" | "right">(
-    "left"
-  );
-
-  // استخدام useEffect لمراقبة التغيرات في اللغة وتحديث الاتجاه (direction)
-  useEffect(() => {
-    const dir = i18n.dir();
-    setTextAlignValue(dir === "rtl" ? "right" : "left");
-  }, [i18n]); // استخدم i18n كمصفوفة اعتماد
 
   const highlightText = (text: string) => {
     return text.replace(
       "Skyline",
-      "<span style='color: #08b1d6;font-size:45px; padding: 0; margin: 0;'>Skyline</span>"
+      "<span style='color: #F067FF;font-size:45px'>Skyline</span>"
     );
   };
+  const textAlignValue = i18n.dir() === "rtl" ? "right" : "left"; // تحديد الاتجاه بناءً على اللغة
 
   return (
     <div className="slider-area slider-bg">
       <div
         className="slider-active"
-        style={{ textAlign: textAlignValue, backgroundColor: "#041742" }}
+        style={{ textAlign: textAlignValue }}
       >
         {/* Single Slider */}
         <div className="single-slider d-flex align-items-center slider-height">
           <div className="container">
-            <div className="row align-items-center justify-content-between">
+            <div className="row align-items-center justify-content-center">
               <motion.div
                 className="col-xl-5 col-lg-5 col-md-9"
                 initial={{ x: -500 }}
@@ -47,25 +39,17 @@ const SliderArea: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
               >
-                <div className="hero__caption mt-30 pt-5">
-                  <p
+                <div className="hero__caption mt-70 pt-5 ">
+                  <span
                     data-animation="fadeInLeft"
                     data-delay=".3s"
-                    style={{
-                      textAlign: i18n.language === "ar" ? "right" : "left",
-                      marginTop: "50px",
-                      marginBottom: "10px",
-                      color: "#eaeaea",
-                    }}
                   >
                     {t("slider.description")}
-                  </p>
-                  <div className="min-h">
+                  </span>
+                  <div className="min-h ">
                     <h1
                       style={{
                         fontSize: "40px",
-                        textAlign: i18n.language === "ar" ? "right" : "left",
-                        color: "#eaeaea",
                       }}
                       dangerouslySetInnerHTML={{
                         __html: highlightText(text),
@@ -75,35 +59,26 @@ const SliderArea: React.FC = () => {
                   <p
                     data-animation="fadeInLeft"
                     data-delay=".8s"
-                    style={{
-                      textAlign: i18n.language === "ar" ? "right" : "left",
-                      color: "#eaeaea",
-                    }}
                   >
                     {t("slider.paragraph")}
                   </p>
-                </div>
-                {/* Slider btn */}
-                <div
-                  className="slider-btns mb-10"
-                  style={{
-                    marginBottom: "30px",
-                  }}
-                >
-                  {/* Hero-btn */}
-                  <Link
-                    data-animation="fadeInLeft"
-                    data-delay="1s"
-                    to="contact"
-                    className="btn radius-btn"
-                  >
-                    {t("slider.button")}
-                  </Link>
+                  {/* Slider btn */}
+                  <div className="slider-btns mb-10">
+                    {/* Hero-btn */}
+                    <Link
+                      data-animation="fadeInLeft"
+                      data-delay="1s"
+                      to="contact"
+                      className="btn radius-btn"
+                    >
+                      {t("slider.button")}
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
 
               <motion.div
-                className="col-xl-6 col-lg-6 flex-center-end"
+                className="col-xl-6 col-lg-6"
                 initial={{ x: 500 }}
                 animate={{ x: 0 }}
                 transition={{ duration: 1 }}
@@ -118,11 +93,10 @@ const SliderArea: React.FC = () => {
                     transition={{
                       type: "spring",
                       stiffness: 100,
-                      damping: 30,
+                      damping: 20,
                       repeat: Infinity,
                       repeatType: "reverse",
                       duration: 2,
-                      // repeatDelay: 0.1,
                     }}
                   />
                 </div>

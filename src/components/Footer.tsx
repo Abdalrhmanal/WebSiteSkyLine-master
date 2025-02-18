@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -17,17 +17,17 @@ interface ContactInfo {
 
 const contactInfo: ContactInfo[] = [
   {
-    icon: <PhoneIcon style={{ color: "#08b1d6", fontSize: "20px" }} />,
+    icon: <PhoneIcon style={{ color: "#fff", fontSize: "20px" }} />,
     text: "+31 6 37718553",
     to: "https://wa.me/+31637718553",
   },
   {
-    icon: <EmailIcon style={{ color: "#08b1d6", fontSize: "20px" }} />,
+    icon: <EmailIcon style={{ color: "#fff", fontSize: "20px" }} />,
     text: "skyline6710@gmail.com",
     to: "mailto:skyline6710@gmail.com",
   },
   {
-    icon: <LocationOnIcon style={{ color: "#08b1d6", fontSize: "20px" }} />,
+    icon: <LocationOnIcon style={{ color: "#fff", fontSize: "20px" }} />,
     text: "123 Skyline Ave, Tech City",
     to: "",
   },
@@ -37,12 +37,12 @@ const socialMediaSites = [
   {
     value: "facebook",
     icon: <FacebookIcon style={{ fontSize: "25px" }} />,
-    path: "https://www.facebook.com/share/18bbbtDXeC/",
+    path: "https://www.facebook.com/",
   },
   {
     value: "Instagram",
     icon: <InstagramIcon style={{ fontSize: "25px" }} />,
-    path: "https://www.instagram.com/skyline_.company?igsh=MWx0ZTB3eHd4cnJvdw==",
+    path: "https://www.instagram.com/skyline_.company/profilecard/?igsh=OHNsejRnbXo2cWR0",
   },
   {
     value: "Linkedin",
@@ -55,20 +55,13 @@ const socialMediaSites = [
     path: "https://x.com/",
   },
 ];
-
-const Footer: React.FC = () => {
+const Footer: React.FC<{ quickLinks: { name: string; to: string }[] }> = ({
+  quickLinks,
+}) => {
+  const [email, setEmail] = useState("");
   const { t, i18n } = useTranslation();
 
-  const quickLinks = [
-    { name: t("footer.quickLinksList.0.name"), to: "/#aboutUs" },
-    { name: t("footer.quickLinksList.1.name"), to: "/business-gallery" },
-    { name: t("footer.quickLinksList.2.name"), to: "/#help" },
-    { name: t("footer.quickLinksList.3.name"), to: "/#services" },
-    { name: t("footer.quickLinksList.4.name"), to: "/contact" },
-  ];
-  /*   const [email, setEmail] = useState("");*/
-
-  /* const handleSubmit = async (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
     const formData = new FormData();
@@ -84,7 +77,7 @@ const Footer: React.FC = () => {
     if (result.success) {
       setEmail("");
     }
-  }; */
+  };
 
   const services = [
     { name: t("footer.servicesList.0.name"), to: "/ai-powered-systems" },
@@ -101,9 +94,8 @@ const Footer: React.FC = () => {
       <div
         className="footer-wrappr"
         style={{
-          // backgroundImage: "url('assets/img/gallery/footer-bg.png')",
+          backgroundImage: "url('assets/img/gallery/footer-bg.png')",
           textAlign: textAlignValue,
-          backgroundColor: "#eaeaea",
         }}
       >
         <div className="footer-area footer-padding">
@@ -112,22 +104,42 @@ const Footer: React.FC = () => {
               <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                 <div className="single-footer-caption mb-20">
                   <div className="footer-tittle">
-                    <h3 style={{ color: "#08b1d6", marginBottom: "10px" }}>
+                    <h3 style={{ color: "#fff", marginBottom: "10px" }}>
                       {t("footer.subscribeNewsletter")}
                     </h3>
-                    <p
-                      style={{
-                        color: "#777",
-                      }}
-                    >
-                      {t("footer.stayUpdated")}
-                    </p>
+                    <p>{t("footer.stayUpdated")}</p>
                   </div>
                   <div className="footer-form">
                     <div id="mc_embed_signup">
-                      <h3
-                        style={{ color: "#08b1d6", marginBottom: "10px" }}
-                      ></h3>
+                      <form
+                        className="subscribe_form relative mail_part"
+                        onSubmit={handleSubmit}
+                        noValidate
+                      >
+                        <input
+                          type="email"
+                          name="EMAIL"
+                          id="newsletter-form-email"
+                          placeholder={t("footer.subscribeNewsletter")}
+                          className="placeholder hide-on-focus"
+                          onFocus={e => (e.target.placeholder = "")}
+                          onBlur={e =>
+                            (e.target.placeholder = "Your email address")
+                          }
+                          value={email}
+                          onChange={e => setEmail(e.target.value)}
+                        />
+                        <div className="form-icon">
+                          <button
+                            type="submit"
+                            name="submit"
+                            id="newsletter-submit"
+                            className="email_icon newsletter-submit button-contactForm"
+                          >
+                            {t("footer.subscribeNewsletter")}
+                          </button>
+                        </div>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -136,22 +148,10 @@ const Footer: React.FC = () => {
               <div className="col-xl-2 col-lg-2 col-md-4 col-sm-5">
                 <div className="single-footer-caption mb-50">
                   <div className="footer-tittle">
-                    <h4
-                      style={{
-                        color: "#08b1d6",
-                      }}
-                    >
-                      {t("footer.quickLinks")}
-                    </h4>
+                    <h4>{t("footer.quickLinks")}</h4>
                     <ul>
                       {quickLinks.map((link, index) => (
-                        <li
-                          key={index}
-                          style={{
-                            color: "#999",
-                            fontSize: "14px",
-                          }}
-                        >
+                        <li key={index}>
                           <Link to={link.to}>{t(link.name)}</Link>
                         </li>
                       ))}
@@ -163,21 +163,12 @@ const Footer: React.FC = () => {
               <div className="col-xl-2 col-lg-3 col-md-4 col-sm-5">
                 <div className="single-footer-caption mb-50">
                   <div className="footer-tittle">
-                    <h4
-                      style={{
-                        color: "#08b1d6",
-                      }}
-                    >
-                      {t("footer.ourServices")}
-                    </h4>
+                    <h4>{t("footer.ourServices")}</h4>
                     <ul>
                       {services.map((service, index) => (
                         <li
                           key={index}
-                          style={{
-                            color: "#999",
-                            fontSize: "14px",
-                          }}
+                          style={{ color: "#C2C5DB" }}
                         >
                           {service.name}
                         </li>
@@ -189,36 +180,19 @@ const Footer: React.FC = () => {
 
               <div className="col-xl-2 col-lg-3 col-md-4 col-sm-5">
                 <div className="single-footer-caption mb-50">
-                  <div className="footer-tittle" style={{ width: "250px" }}>
-                    <h4
-                      style={{
-                        color: "#08b1d6",
-                      }}
-                    >
-                      {t("footer.contactUs")}
-                    </h4>
+                  <div
+                    className="footer-tittle"
+                    style={{ width: "250px" }}
+                  >
+                    <h4>{t("footer.contactUs")}</h4>
                     <ul>
                       {contactInfo.map((contact, index) => (
-                        <li
-                          key={index}
-                          style={{
-                            fontSize: " 12px",
-                          }}
-                        >
-                          <span
-                            style={{
-                              [i18n.language === "en"
-                                ? "margin-right"
-                                : "margin-left"]: "10px",
-                            }}
-                          >
-                            {contact.icon}
-                          </span>
+                        <li key={index}>
+                          {contact.icon}
                           <a
                             href={contact.to}
                             target="_blank"
                             rel="noopener noreferrer"
-                            dir="ltr"
                           >
                             {contact.text}
                           </a>
@@ -233,7 +207,7 @@ const Footer: React.FC = () => {
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{
-                                color: "#041742",
+                                color: "#fff",
                                 display: " inline-flex",
                                 justifyContent: " center",
                                 alignItems: " center",
@@ -258,26 +232,17 @@ const Footer: React.FC = () => {
               <div className="row">
                 <div className="col-xl-12">
                   <div className="footer-copy-right text-center">
-                    <p
-                      style={{
-                        color: "#212121",
-                      }}
-                    >
+                    <p>
                       Copyright &copy;{new Date().getFullYear()} All rights
-                      reserved{" "}
+                      reserved | This template is made with{" "}
                       <i
                         className="fa fa-heart"
                         aria-hidden="true"
-                        style={{
-                          color: "#041742",
-                        }}
                       ></i>{" "}
+                      by{" "}
                       <a
                         href="#"
                         rel="noopener noreferrer"
-                        style={{
-                          color: "#08b1d6",
-                        }}
                       >
                         SkyLine
                       </a>

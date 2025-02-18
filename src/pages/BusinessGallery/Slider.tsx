@@ -5,12 +5,7 @@ const Slider: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <div
-      className="slider-area slider-bg"
-      style={{
-        background: "#041742",
-      }}
-    >
+    <div className="slider-area slider-bg">
       {/* Single Slider */}
       <div className="single-slider d-flex align-items-center slider-height3">
         <div className="container">
@@ -20,11 +15,8 @@ const Slider: React.FC = () => {
                 <h1
                   data-animation="fadeInLeft"
                   data-delay=".6s"
-                  style={{
-                    color: "#eaeaea",
-                  }}
                 >
-                  {t("Business")}
+                {t("Business")}
                 </h1>
               </div>
             </div>

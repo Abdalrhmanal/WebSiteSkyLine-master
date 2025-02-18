@@ -40,7 +40,7 @@ export default function SplitButton() {
   };
 
   const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
+    setOpen(prevOpen => !prevOpen);
   };
 
   const handleClose = (event: Event) => {
@@ -56,7 +56,10 @@ export default function SplitButton() {
 
   return (
     <React.Fragment>
-      <Box mx={1} sx={{ direction: "ltr" }}>
+      <Box
+        mx={1}
+        sx={{ direction: "ltr" }}
+      >
         <ButtonGroup
           variant="outlined"
           ref={anchorRef}
@@ -65,11 +68,11 @@ export default function SplitButton() {
           <Button
             onClick={handleClick}
             sx={{
-              border: "1px solid #08b1d6",
-              color: "#eaeaea",
+              border: "1px solid #F067FF",
+              color: "#fff",
               textTransform: "capitalize",
               fontSize: "16px",
-              px: { xs: 0.2, sm: 3 },
+              px: { xs: 1, sm: 3 },
             }}
           >
             {options[selectedIndex]}
@@ -82,17 +85,16 @@ export default function SplitButton() {
             aria-haspopup="menu"
             onClick={handleToggle}
             sx={{
-              border: "1px solid #08b1d6",
-              color: "#eaeaea",
-              px: { xs: 0.2, sm: 1 },
+              border: "1px solid #F067FF",
+              color: "#fff",
+              px: { xs: 1, sm: 1 },
             }}
           >
-            <TranslateIcon sx={{ fontSize: "22px" }} />
+            <TranslateIcon sx={{ fontSize: "25px" }} />
           </Button>
         </ButtonGroup>
-
         <Popper
-          sx={{}}
+          sx={{ zIndex: 1, color: "red" }}
           open={open}
           anchorEl={anchorRef.current}
           role={undefined}
@@ -105,17 +107,13 @@ export default function SplitButton() {
               style={{
                 transformOrigin:
                   placement === "bottom" ? "center top" : "center bottom",
-                color: "#08b1d6",
+                color: "#F067FF",
 
-                background: "rgb(255,255,255,.fa)",
-                fontSize: "18px",
+                background: "rgb(255,255,255,0.22)",
+                fontSize: "16px",
               }}
             >
-              <Paper
-                sx={{
-                  background: "#eaeaea",
-                }}
-              >
+              <Paper>
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList
                     id="split-button-menu"
@@ -131,11 +129,7 @@ export default function SplitButton() {
                         key={option}
                         selected={index === selectedIndex}
                         onClick={() => handleMenuItemClick(index)}
-                        sx={{
-                          fontSize: "18px",
-                          color: "#08b1d6",
-                          fontWeight: "500",
-                        }}
+                        sx={{ fontSize: "18px" }}
                       >
                         {option}
                       </MenuItem>

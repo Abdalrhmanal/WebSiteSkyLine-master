@@ -30,7 +30,7 @@ const questions: Question[] = [
 ];
 
 const AskQuestionsSection: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t,i18n } = useTranslation();
 
   const itemVariants = {
     hidden: { opacity: 0, y: 40 },
@@ -55,29 +55,16 @@ const AskQuestionsSection: React.FC = () => {
           <div className="col-xl-8 col-lg-9 col-md-10">
             {/* Section Title */}
             <div className="section-tittle text-center mb-90">
-              <h2
-                style={{
-                  color: "#08b1d6",
-                  textAlign: "center",
-                }}
-              >
-                {t("askQuestions.sectionTitle")}
-              </h2>
-              <p
-                style={{
-                  textAlign: textAlignValue,
-                  color: "#666",
-                }}
-              >
-                {t("askQuestions.sectionDescription")}
-              </p>
+              <h2>{t("askQuestions.sectionTitle")}</h2>
+              <p>{t("askQuestions.sectionDescription")}</p>
             </div>
           </div>
         </div>
-        <div className="row" style={{ textAlign: textAlignValue }}>
-          {questions.map((question, index) => (
+        <div className="row"             style={{ textAlign: textAlignValue }}
+        >
+          {questions.map((question,index) => (
             <motion.div
-              key={question.question}
+              key={question.question }
               className="col-lg-6 col-md-6"
               custom={index}
               initial="hidden"
@@ -85,20 +72,10 @@ const AskQuestionsSection: React.FC = () => {
               variants={itemVariants}
             >
               <div className="single-question d-flex mb-50">
-                <span style={{ color: "#121212" }}>Q.</span>
-                <div
-                  className="pera"
-                  style={{
-                    [i18n.language === "en" ? "padding-left" : "padding-right"]:
-                      "20px",
-                  }}
-                >
-                  <h2 style={{ color: "#121212" }}>
-                    {t(`askQuestions.questions.${index}.question`)}
-                  </h2>
-                  <p style={{ color: "#666" }}>
-                    {t(`askQuestions.questions.${index}.answer`)}
-                  </p>
+                <span> Q.</span>
+                <div className="pera">
+                  <h2>{t(`askQuestions.questions.${index}.question`)}</h2>
+                  <p>{t(`askQuestions.questions.${index}.answer`)}</p>
                 </div>
               </div>
             </motion.div>
@@ -107,7 +84,10 @@ const AskQuestionsSection: React.FC = () => {
         <div className="row">
           <div className="col-xl-12">
             <div className="more-btn text-center mt-20">
-              <Link to="contant" className="btn">
+              <Link
+                to="content"
+                className="btn"
+              >
                 {t("askQuestions.buttonText")}
               </Link>
             </div>

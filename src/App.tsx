@@ -4,12 +4,9 @@ import "./i18n";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import "./App.css";
-
 const App = () => {
   const { i18n } = useTranslation();
 
-  /* dd */
-  
   useEffect(() => {
     const lang = i18n.language;
     if (lang === "ar") {

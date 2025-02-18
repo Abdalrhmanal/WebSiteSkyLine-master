@@ -89,93 +89,55 @@
   },
   "personalCards": {
     "sectionTitle": "About Us",
+
     "testimonials": [
       {
-        "role": "System Analysis and Design",
-        "text": "Our System Analysis and Design team is highly experienced in analyzing client requirements and developing complex systems that efficiently meet those needs. The team focuses on architectural diagrams for projects and accurately documents all details, making it easier to understand internal processes and workflows. We place great importance on documenting every phase of the project to ensure easy maintenance and testing in the future, which helps speed up development and reduce errors. The team also uses the best tools and techniques for analysis and design to ensure the delivery of flexible, scalable, and manageable solutions.With our commitment to precise analysis and comprehensive documentation, we contribute to building strong and reliable systems that support the client's success and ensure the long-term sustainability of operations",
-        "backgrcolor": "#0A2358"
-      },
-      {
         "role": "Backend Team",
-        "text": "Our backend team is distinguished by deep expertise and high professionalism in building robust and flexible systems that meet the highest standards of performance and security. We focus on developing advanced solutions using the latest technologies to ensure application stability and efficiency. The team works in harmony with the frontend teams to guarantee a seamless and integrated user experience. We prioritize data analysis and server performance optimization to ensure fast response times and efficient handling of large volumes of data. With our commitment to quality and innovation, we deliver intelligent solutions that enhance our clients' success and support their business growth.",
-        "backgrcolor": "#122C6D"
+        "text": "Our backend team is distinguished by deep expertise and high professionalism in building robust and flexible systems that meet the highest standards of performance and security. We focus on developing advanced solutions using the latest technologies to ensure application stability and efficiency. The team works in harmony with the frontend teams to guarantee a seamless and integrated user experience. We prioritize data analysis and server performance optimization to ensure fast response times and efficient handling of large volumes of data. With our commitment to quality and innovation, we deliver intelligent solutions that enhance our clients' success and support their business growth."
       },
       {
         "role": "Frontend Team",
-        "text": "Our frontend team has extensive experience in developing smooth and flexible user interfaces using the latest technologies such as React and Angular. We strive to provide a unique user experience through dynamic and responsive designs that perform efficiently across various devices. The team follows best practices to ensure fast page loading and seamless interaction. We also pay great attention to maintainability and future scalability, ensuring the sustainability of applications. With our dedication to creativity and quality, we deliver modern solutions that enhance user experience and effectively meet customer needs.  ",
-        "backgrcolor": "#031235"
+        "text": "Our frontend team has extensive experience in developing smooth and flexible user interfaces using the latest technologies such as React and Angular. We strive to provide a unique user experience through dynamic and responsive designs that perform efficiently across various devices. The team follows best practices to ensure fast page loading and seamless interaction. We also pay great attention to maintainability and future scalability, ensuring the sustainability of applications. With our dedication to creativity and quality, we deliver modern solutions that enhance user experience and effectively meet customer needs.  "
       },
       {
         "role": "Mobile App Development Team",
-        "text": "Our mobile app development team has vast experience in building high-performance applications for Android and iOS using the latest technologies such as Flutter and React Native. We focus on developing smooth and fast applications with innovative user interfaces that efficiently meet user needs. Our team is committed to enhancing performance, user experience, and ensuring compatibility across various devices for an optimal experience. We also adhere to the best security practices and continuous updates to ensure application stability and sustainability. With our passion for development and innovation, we provide comprehensive solutions that fulfill customer expectations and drive business growth.",
-        "backgrcolor": "#2A3D77"
+        "text": "Our mobile app development team has vast experience in building high-performance applications for Android and iOS using the latest technologies such as Flutter and React Native. We focus on developing smooth and fast applications with innovative user interfaces that efficiently meet user needs. Our team is committed to enhancing performance, user experience, and ensuring compatibility across various devices for an optimal experience. We also adhere to the best security practices and continuous updates to ensure application stability and sustainability. With our passion for development and innovation, we provide comprehensive solutions that fulfill customer expectations and drive business growth."
       },
       {
         "role": "Server Management & Hosting Team",
-        "text": "Our server management team has strong expertise in providing high-speed, flexible hosting solutions with guaranteed continuous service availability. We efficiently manage servers using the latest technologies to ensure stable performance and advanced data protection. The team focuses on resource optimization and security enhancement through backup solutions and rapid response to failures. We also offer customized hosting plans that cater to various client needs, from startups to large enterprises. With our expertise and professionalism, we ensure reliable servers that achieve the highest levels of stability and performance.",
-        "backgrcolor": "#1B1F4A"
+        "text": "Our server management team has strong expertise in providing high-speed, flexible hosting solutions with guaranteed continuous service availability. We efficiently manage servers using the latest technologies to ensure stable performance and advanced data protection. The team focuses on resource optimization and security enhancement through backup solutions and rapid response to failures. We also offer customized hosting plans that cater to various client needs, from startups to large enterprises. With our expertise and professionalism, we ensure reliable servers that achieve the highest levels of stability and performance."
       },
       {
         "role": "UI/UX & Graphic Design Team",
-        "text": "Our UI/UX and Graphic Design team brings creative expertise in designing visually appealing interfaces and smooth user experiences that effectively meet client needs. We focus on balancing aesthetics and functionality to ensure an intuitive and user-friendly experience. The team specializes in branding, logo design, and graphic content creation in a professional manner that reflects brand identity. We leverage the latest tools and technologies to ensure modern and responsive designs across different devices. With our passion for creativity and attention to detail, we deliver design solutions that enhance user experience and leave a lasting impression",
-        "backgrcolor": "#3B4F85"
+        "text": "Our UI/UX and Graphic Design team brings creative expertise in designing visually appealing interfaces and smooth user experiences that effectively meet client needs. We focus on balancing aesthetics and functionality to ensure an intuitive and user-friendly experience. The team specializes in branding, logo design, and graphic content creation in a professional manner that reflects brand identity. We leverage the latest tools and technologies to ensure modern and responsive designs across different devices. With our passion for creativity and attention to detail, we deliver design solutions that enhance user experience and leave a lasting impression"
+      },
+      {
+        "role": "System Analysis and Design",
+        "text": "Our System Analysis and Design team is highly experienced in analyzing client requirements and developing complex systems that efficiently meet those needs. The team focuses on architectural diagrams for projects and accurately documents all details, making it easier to understand internal processes and workflows. We place great importance on documenting every phase of the project to ensure easy maintenance and testing in the future, which helps speed up development and reduce errors. The team also uses the best tools and techniques for analysis and design to ensure the delivery of flexible, scalable, and manageable solutions."
       }
     ]
   },
   "footer": {
-    "subscribeNewsletter": "Stay informed with us",
-    "stayUpdated": "Contact us and see how we can support you to develop your investment and service ideas and projects.",
+    "subscribeNewsletter": "Subscribe to Our Newsletter",
+    "stayUpdated": "Stay updated with our latest services and offerings by subscribing to our newsletter.",
     "quickLinks": "Quick Links",
     "ourServices": "Our Services",
     "contactUs": "Contact Us",
-    "footerCopyRight": "Copyright &copy; {{year}} All rights reserved <i class='fa fa-heart' aria-hidden='true'></i> by <a href='#' rel='noopener noreferrer'>SkyLine</a>",
+    "footerCopyRight": "Copyright &copy; {{year}} All rights reserved | This template is made with <i class='fa fa-heart' aria-hidden='true'></i> by <a href='#' rel='noopener noreferrer'>SkyLine</a>",
     "quickLinksList": [
-      {
-        "name": "About Us",
-        "to": "#aboutUs"
-      },
-      {
-        "name": "Business Gallery",
-        "to": "/business-gallery"
-      },
-      {
-        "name": "FAQs",
-        "to": "#help"
-      },
-      {
-        "name": "Services",
-        "to": "#services"
-      },
-      {
-        "name": "Contact",
-        "to": "/contact"
-      }
+      { "name": "About Us", "to": "#aboutUs" },
+      { "name": "Business Gallery", "to": "/business-gallery" },
+      { "name": "FAQs", "to": "#help" },
+      { "name": "Services", "to": "#services" },
+      { "name": "Contact", "to": "/contact" }
     ],
     "servicesList": [
-      {
-        "name": "AI-Powered Systems",
-        "to": "/ai-powered-systems"
-      },
-      {
-        "name": "Cloud Services",
-        "to": "/cloud-services"
-      },
-      {
-        "name": "Technical Support",
-        "to": "/technical-support"
-      },
-      {
-        "name": "Technology Consulting",
-        "to": "/technology-consulting"
-      },
-      {
-        "name": "Marketing & Media",
-        "to": "/marketing-media"
-      },
-      {
-        "name": "Mobile Application",
-        "to": ""
-      }
+      { "name": "AI-Powered Systems", "to": "/ai-powered-systems" },
+      { "name": "Cloud Services", "to": "/cloud-services" },
+      { "name": "Technical Support", "to": "/technical-support" },
+      { "name": "Technology Consulting", "to": "/technology-consulting" },
+      { "name": "Marketing & Media", "to": "/marketing-media" },
+      { "name": "Mobile Application", "to": "" }
     ]
   },
   "Business": " Business Gallery",
