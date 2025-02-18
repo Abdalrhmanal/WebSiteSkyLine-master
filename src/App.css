@@ -1,0 +1,35 @@
+html[dir="rtl"] {
+  font-family: "Cairo", serif !important;
+}
+
+[dir="ltr"] .min-h {
+  min-height: 250px;
+}
+[dir="rtl"] .min-h {
+  min-height: 120px;
+}
+
+@media (min-width: 768px) {
+  [dir="ltr"] .min-h {
+    min-height: 150px;
+  }
+  [dir="rtl"] .min-h {
+    min-height: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  [dir="ltr"] .min-h {
+    min-height: 180px;
+  }
+  [dir="rtl"] .min-h {
+    min-height: 100px;
+  }
+}
+@media (min-width: 1440px) {
+  [dir="ltr"] .min-h {
+    min-height: 150px;
+  }
+  [dir="rtl"] .min-h {
+    min-height: 70px;
+  }
+}
