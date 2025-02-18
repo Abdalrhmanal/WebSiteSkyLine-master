@@ -13,7 +13,6 @@ const Home = () => {
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Business Gallery", path: "/business-gallery" },
-    { name: "Help", path: "#help" },
     { name: "Contact", path: "/contact" },
   ];
   const quickLinks = [
