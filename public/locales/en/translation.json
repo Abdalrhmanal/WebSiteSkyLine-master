@@ -118,12 +118,12 @@
     ]
   },
   "footer": {
-    "subscribeNewsletter": "Subscribe to Our Newsletter",
-    "stayUpdated": "Stay updated with our latest services and offerings by subscribing to our newsletter.",
+    "subscribeNewsletter": "Stay informed with us",
+    "stayUpdated": "Contact us and see how we can support you to develop your investment and service ideas and projects.",
     "quickLinks": "Quick Links",
     "ourServices": "Our Services",
     "contactUs": "Contact Us",
-    "footerCopyRight": "Copyright &copy; {{year}} All rights reserved | This template is made with <i class='fa fa-heart' aria-hidden='true'></i> by <a href='#' rel='noopener noreferrer'>SkyLine</a>",
+    "footerCopyRight": "Copyright &copy; {{year}} All rights reserved <i class='fa fa-heart' aria-hidden='true'></i> by <a href='#' rel='noopener noreferrer'>SkyLine</a>",
     "quickLinksList": [
       { "name": "About Us", "to": "#aboutUs" },
       { "name": "Business Gallery", "to": "/business-gallery" },

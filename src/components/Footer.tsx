@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -58,10 +58,10 @@ const socialMediaSites = [
 const Footer: React.FC<{ quickLinks: { name: string; to: string }[] }> = ({
   quickLinks,
 }) => {
-  const [email, setEmail] = useState("");
-  const { t, i18n } = useTranslation();
+/*   const [email, setEmail] = useState("");
+ */  const { t, i18n } = useTranslation();
 
-  const handleSubmit = async (event: React.FormEvent) => {
+  /* const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
     const formData = new FormData();
@@ -77,7 +77,7 @@ const Footer: React.FC<{ quickLinks: { name: string; to: string }[] }> = ({
     if (result.success) {
       setEmail("");
     }
-  };
+  }; */
 
   const services = [
     { name: t("footer.servicesList.0.name"), to: "/ai-powered-systems" },
@@ -111,35 +111,9 @@ const Footer: React.FC<{ quickLinks: { name: string; to: string }[] }> = ({
                   </div>
                   <div className="footer-form">
                     <div id="mc_embed_signup">
-                      <form
-                        className="subscribe_form relative mail_part"
-                        onSubmit={handleSubmit}
-                        noValidate
-                      >
-                        <input
-                          type="email"
-                          name="EMAIL"
-                          id="newsletter-form-email"
-                          placeholder={t("footer.subscribeNewsletter")}
-                          className="placeholder hide-on-focus"
-                          onFocus={e => (e.target.placeholder = "")}
-                          onBlur={e =>
-                            (e.target.placeholder = "Your email address")
-                          }
-                          value={email}
-                          onChange={e => setEmail(e.target.value)}
-                        />
-                        <div className="form-icon">
-                          <button
-                            type="submit"
-                            name="submit"
-                            id="newsletter-submit"
-                            className="email_icon newsletter-submit button-contactForm"
-                          >
-                            {t("footer.subscribeNewsletter")}
-                          </button>
-                        </div>
-                      </form>
+                      <h3 style={{ color: "#fff", marginBottom: "10px" }}>
+                        
+                      </h3>
                     </div>
                   </div>
                 </div>
@@ -234,12 +208,12 @@ const Footer: React.FC<{ quickLinks: { name: string; to: string }[] }> = ({
                   <div className="footer-copy-right text-center">
                     <p>
                       Copyright &copy;{new Date().getFullYear()} All rights
-                      reserved | This template is made with{" "}
+                      reserved {" "}
                       <i
                         className="fa fa-heart"
                         aria-hidden="true"
                       ></i>{" "}
-                      by{" "}
+                      {" "}
                       <a
                         href="#"
                         rel="noopener noreferrer"
