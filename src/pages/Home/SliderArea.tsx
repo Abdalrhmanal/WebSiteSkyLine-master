@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { useTypewriter } from "react-simple-typewriter";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+
 const SliderArea: React.FC = () => {
   const { t, i18n } = useTranslation();
-  console.log(i18n.dir());
   const [text] = useTypewriter({
     words: [t("slider.title")],
     loop: true,
@@ -13,6 +13,13 @@ const SliderArea: React.FC = () => {
     deleteSpeed: 50,
     delaySpeed: 1000,
   });
+  const [textAlignValue, setTextAlignValue] = useState<'left' | 'right'>('left');
+
+  // استخدام useEffect لمراقبة التغيرات في اللغة وتحديث الاتجاه (direction)
+  useEffect(() => {
+    const dir = i18n.dir();
+    setTextAlignValue(dir === "rtl" ? "right" : "left");
+  }, [i18n]); // استخدم i18n كمصفوفة اعتماد
 
   const highlightText = (text: string) => {
     return text.replace(
@@ -20,7 +27,6 @@ const SliderArea: React.FC = () => {
       "<span style='color: #F067FF;font-size:45px'>Skyline</span>"
     );
   };
-  const textAlignValue = i18n.dir() === "rtl" ? "right" : "left"; // تحديد الاتجاه بناءً على اللغة
 
   return (
     <div className="slider-area slider-bg">
