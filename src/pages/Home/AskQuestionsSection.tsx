@@ -55,8 +55,21 @@ const AskQuestionsSection: React.FC = () => {
           <div className="col-xl-8 col-lg-9 col-md-10">
             {/* Section Title */}
             <div className="section-tittle text-center mb-90">
-              <h2>{t("askQuestions.sectionTitle")}</h2>
-              <p>{t("askQuestions.sectionDescription")}</p>
+              <h2
+                style={{
+                  color: "#00cffd",
+                  textAlign: "center",
+                }}
+              >
+                {t("askQuestions.sectionTitle")}
+              </h2>
+              <p
+                style={{
+                  textAlign: textAlignValue,
+                }}
+              >
+                {t("askQuestions.sectionDescription")}
+              </p>
             </div>
           </div>
         </div>
@@ -71,7 +84,7 @@ const AskQuestionsSection: React.FC = () => {
               variants={itemVariants}
             >
               <div className="single-question d-flex mb-50">
-                <span>Q.</span>
+                <span style={{ color: "#000" }}>Q.</span>
                 <div
                   className="pera"
                   style={{
@@ -79,8 +92,12 @@ const AskQuestionsSection: React.FC = () => {
                       "20px",
                   }}
                 >
-                  <h2>{t(`askQuestions.questions.${index}.question`)}</h2>
-                  <p>{t(`askQuestions.questions.${index}.answer`)}</p>
+                  <h2 style={{ color: "#000" }}>
+                    {t(`askQuestions.questions.${index}.question`)}
+                  </h2>
+                  <p style={{ color: "#00000080" }}>
+                    {t(`askQuestions.questions.${index}.answer`)}
+                  </p>
                 </div>
               </div>
             </motion.div>

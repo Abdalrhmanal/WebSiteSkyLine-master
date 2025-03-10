@@ -26,7 +26,7 @@ const Header: React.FC = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <header>
@@ -35,19 +35,6 @@ const Header: React.FC = () => {
           <div className="header-bottom header-sticky">
             <div className="container-fluid">
               <div className="row align-items-center">
-                {/* Logo */}
-                <div className="col-xl-2 col-lg-2 col-6">
-                  <div className="logo">
-                    <Link to="/">
-                      <img
-                        src="assets/img/logo/logo.png"
-                        alt="Logo"
-                        width={"100px"}
-                      />
-                    </Link>
-                  </div>
-                </div>
-
                 <div className="col-6 d-flex justify-content-end align-items-center d-lg-none">
                   <button
                     className="mobile-menu-toggle"
@@ -64,6 +51,27 @@ const Header: React.FC = () => {
                   <SplitButton />
                 </div>
 
+                {/* Logo */}
+                <div className="col-xl-2 col-lg-2 col-6">
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      padding: "10px 0",
+                    }}
+                    className="logo"
+                  >
+                    <Link to="/">
+                      <img
+                        src="assets/img/logo/logo.png"
+                        alt="Logo"
+                        width={"100px"}
+                      />
+                    </Link>
+                  </div>
+                </div>
+
                 <div className="col-xl-10 col-lg-10 d-none d-lg-block">
                   <div className="menu-wrapper d-flex align-items-center justify-content-end">
                     {/* Main-menu */}
@@ -72,7 +80,14 @@ const Header: React.FC = () => {
                         <ul id="navigation">
                           {menuItems.map((item, index) => (
                             <li key={index}>
-                              <Link to={item.path}>
+                              <Link
+                                style={{
+                                  color: "#fff",
+                                  fontWeight: "bold",
+                                  fontSize: "22px",
+                                }}
+                                to={item.path}
+                              >
                                 {t(
                                   `menu.${item.name
                                     .toLowerCase()
@@ -96,11 +111,14 @@ const Header: React.FC = () => {
                       isMobileMenuOpen ? "open" : ""
                     }`}
                     style={{
-                      background: "#4C1E51",
+                      background: "#00cffd0a",
                       maxHeight: isMobileMenuOpen ? "300px" : "0",
                       transition: "max-height 0.5s ease-out",
                       overflow: "hidden",
                       marginTop: "10px",
+                      fontWeight: "bold",
+                      fontSize: "22px",
+                      textAlign: `${i18n.dir() === "rtl" ? "right" : "left"}`,
                     }}
                   >
                     <ul style={{ padding: "15px 30px" }}>

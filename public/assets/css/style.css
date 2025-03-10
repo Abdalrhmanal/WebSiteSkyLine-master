@@ -116,7 +116,7 @@ h4,
 h5,
 h6 {
   font-family: "Poppins", sans-serif;
-  color: #4c1e51;
+  color: #fff;
   margin-top: 0px;
   font-style: normal;
   font-weight: 500;
@@ -185,7 +185,7 @@ a:hover,
 }
 a,
 button {
-  color: #fff;
+  color: #00cffd;
   outline: medium none;
 }
 button:focus,
@@ -1841,10 +1841,7 @@ hr {
     padding-bottom: 70px;
   }
 }
-.section-padding40 {
-  padding-top: 140px;
-  padding-bottom: 100px;
-}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-padding40 {
     padding-top: 100px;
@@ -2019,15 +2016,15 @@ hr {
 }
 @media (max-width: 575px) {
   .section-tittle h2 {
-    text-align: left;
     font-size: 24px;
+    textalign: "center";
   }
 }
 .section-tittle2 p {
   color: #6e7697;
 }
 .section-tittle2 h2 {
-  color: #4c1e51;
+  color: #fff;
 }
 .section-bg {
   background-size: cover;
@@ -2041,7 +2038,7 @@ hr {
   background-repeat: no-repeat;
 }
 .section-bg1 {
-  background: #2d0a31;
+  background: #fff;
 }
 .white-bg {
   background: #ffffff;
@@ -2191,7 +2188,7 @@ hr {
 .main-header .main-menu ul li a {
   color: #fff;
   font-weight: 400;
-  padding: 39px 2px;
+  padding: 12px 2px;
   display: block;
   font-size: 14px;
   -webkit-transition: 0.3s;
@@ -2215,10 +2212,10 @@ hr {
   -moz-transition: 0.4s;
   -o-transition: 0.4s;
   transition: 0.4s;
-  background: #f067ff;
+  background: #00cffd;
 }
 .main-header .main-menu ul li:hover > a {
-  color: #f067ff;
+  color: #00cffd;
 }
 .main-header .main-menu ul li:hover > a::after {
   left: 0;
@@ -2328,7 +2325,7 @@ hr {
   position: unset !important;
 }
 .header-sticky.sticky-bar {
-  background: #4c1e51;
+  background: #000;
 }
 .header-sticky.sticky-bar.sticky .main-menu ul li a {
   padding: 20px 20px !important;
@@ -2366,7 +2363,7 @@ hr {
 }
 .mobile_menu .slicknav_menu .slicknav_nav {
   margin-top: 9px !important;
-  background: #4c1e51;
+  background: #fff;
 }
 .mobile_menu .slicknav_menu .slicknav_nav a:hover {
   background: transparent;
@@ -2509,7 +2506,7 @@ hr {
 .slider-area .hero__caption p {
   margin-bottom: 31px;
   color: #a5a7c5;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2617,7 +2614,7 @@ hr {
   }
 }
 .slider-bg {
-  background: #2d0a31;
+  background: #000;
 }
 .dot-style .slick-dots {
   text-align: right;
@@ -2869,7 +2866,6 @@ form.search-box .input-form .world-form i {
   -o-transition: 0.2s;
   transition: 0.2s;
   text-transform: capitalize;
-  color: #fff;
 }
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .team-area .single-cat .cat-cap h5 > div {
@@ -3046,7 +3042,7 @@ form.search-box .input-form .world-form i {
   border-bottom: 1px solid #e7e6eb;
 }
 .pricing-card-area .single-card .card-mid h4 {
-  color: #4c1e51;
+  color: #fff;
   font-size: 32px;
   font-weight: 600;
 }
@@ -3218,13 +3214,13 @@ form.search-box .input-form .world-form i {
   font-size: 15px;
 }
 .ask-questions .single-question.single-question2 span {
-  color: #4c1e51;
+  color: #fff;
 }
 .ask-questions .single-question.single-question2 .pera {
   padding-left: 28px;
 }
 .ask-questions .single-question.single-question2 .pera h2 {
-  color: #4c1e51;
+  color: #fff;
 }
 .ask-questions .single-question.single-question2 .pera p {
   color: #707070;
@@ -3258,7 +3254,7 @@ form.search-box .input-form .world-form i {
   }
 }
 .testimonial-area .single-testimonial {
-  background: #4c1e51;
+  background: #fff;
   padding: 70px 100px 70px 100px;
   border-radius: 12px;
 }
@@ -3283,7 +3279,7 @@ form.search-box .input-form .world-form i {
 }
 .testimonial-area .testimonial-caption p {
   font-size: 16px;
-  color: #4c1e51;
+  color: #fff;
   color: #fff;
   line-height: 45px;
   line-height: 1.5;
@@ -3345,10 +3341,10 @@ form.search-box .input-form .world-form i {
   background: #fff;
 }
 .h1-testimonial-active button.slick-arrow:hover i {
-  color: #4c1e51;
+  color: #fff;
 }
 .h1-testimonial-active button.slick-arrow i {
-  color: #4c1e51;
+  color: #fff;
   font-size: 20px;
   position: relative;
   top: 3px;

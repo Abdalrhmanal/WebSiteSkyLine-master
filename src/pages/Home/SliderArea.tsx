@@ -26,7 +26,7 @@ const SliderArea: React.FC = () => {
   const highlightText = (text: string) => {
     return text.replace(
       "Skyline",
-      "<span style='color: #F067FF;font-size:45px'>Skyline</span>"
+      "<span style='color: #00cffd;font-size:45px; padding: 0; margin: 0;'>Skyline</span>"
     );
   };
 
@@ -51,6 +51,7 @@ const SliderArea: React.FC = () => {
                     style={{
                       textAlign: i18n.language === "ar" ? "right" : "left",
                       marginTop: "50px",
+                      marginBottom: "10px",
                     }}
                   >
                     {t("slider.description")}

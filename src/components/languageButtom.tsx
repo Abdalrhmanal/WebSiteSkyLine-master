@@ -65,11 +65,11 @@ export default function SplitButton() {
           <Button
             onClick={handleClick}
             sx={{
-              border: "1px solid #F067FF",
+              border: "1px solid #00cffd",
               color: "#fff",
               textTransform: "capitalize",
               fontSize: "16px",
-              px: { xs: 1, sm: 3 },
+              px: { xs: 0.2, sm: 3 },
             }}
           >
             {options[selectedIndex]}
@@ -82,14 +82,15 @@ export default function SplitButton() {
             aria-haspopup="menu"
             onClick={handleToggle}
             sx={{
-              border: "1px solid #F067FF",
+              border: "1px solid #00cffd",
               color: "#fff",
-              px: { xs: 1, sm: 1 },
+              px: { xs: 0.2, sm: 1 },
             }}
           >
-            <TranslateIcon sx={{ fontSize: "25px" }} />
+            <TranslateIcon sx={{ fontSize: "22px" }} />
           </Button>
         </ButtonGroup>
+
         <Popper
           sx={{ zIndex: 1, color: "red" }}
           open={open}
@@ -104,9 +105,9 @@ export default function SplitButton() {
               style={{
                 transformOrigin:
                   placement === "bottom" ? "center top" : "center bottom",
-                color: "#F067FF",
+                color: "#00cffd",
 
-                background: "rgb(255,255,255,0.22)",
+                background: "rgb(255,255,255,.1a)",
                 fontSize: "16px",
               }}
             >

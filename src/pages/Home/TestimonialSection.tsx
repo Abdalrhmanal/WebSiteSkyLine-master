@@ -20,7 +20,9 @@ const PersonalCards = () => {
 
   useEffect(() => {
     // استرجاع المصفوفة كاملة من ملف الترجمة مع returnObjects: true
-    const testimonialsData = t("personalCards.testimonials", { returnObjects: true }) as Testimonial[];
+    const testimonialsData = t("personalCards.testimonials", {
+      returnObjects: true,
+    }) as Testimonial[];
     // يمكن إضافة خاصية id إذا لم تكن موجودة مسبقًا
     const testimonialsWithId = testimonialsData.map((item, index) => ({
       ...item,
@@ -115,7 +117,7 @@ const PersonalCards = () => {
             prevEl: ".swiper-button-prev",
           }}
         >
-          {testimonials.map(testimonial => (
+          {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
               <Box
                 sx={{

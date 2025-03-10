@@ -10,82 +10,82 @@ const DedicatedSupportSection: React.FC = () => {
   const textAlignValue = i18n.dir() === "rtl" ? "right" : "left";
 
   return (
-    <motion.div
-      className="about-area1 pb-bottom"
-      initial={{ opacity: 0, x: -100 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1 }}
-    >
-      <div className="container">
-        <div className="row align-items-center justify-content-between">
-          <div
-            className="col-xl-7 col-lg-7 col-md-12"
-            style={{ textAlign: textAlignValue }}
-          >
-            <div className="about-caption about-caption3 mb-50">
-              {/* Section Title */}
-              <motion.div className="section-tittle section-tittle2 mb-30">
-                <h2 style={{ fontSize: "35px" }}>
+    <div style={{ background: "#000", padding: "50px 0" }}>
+      <motion.div
+        className="about-area1 pb-bottom"
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <div className="container">
+          <div className="row align-items-center justify-content-between">
+            <div
+              className="col-xl-7 col-lg-7 col-md-12"
+              style={{ textAlign: textAlignValue }}
+            >
+              <div className="about-caption about-caption3 mb-50">
+                {/* Section Title */}
+                <h2 style={{ fontSize: "35px", color: "#00cffd" }}>
                   {t("dedicatedSupport.title")}
                 </h2>
-              </motion.div>
-              <p className="mb-40">{t("dedicatedSupport.description")}</p>
-              <ul className="mb-30">
-                <li>
-                  <GppGoodIcon
-                    sx={{
-                      fontSize: "25px",
-                      [i18n.language === "ar" ? "ml" : "mr"]: 1,
-                    }}
-                  />
-                  <p>{t("dedicatedSupport.points.security")}</p>
-                </li>
-                <li>
-                  <ThumbUpAltIcon
-                    sx={{
-                      fontSize: "25px",
-                      [i18n.language === "ar" ? "ml" : "mr"]: 1,
-                    }}
-                  />
-                  <p>{t("dedicatedSupport.points.trust")}</p>
-                </li>
-                <li>
-                  <VisibilityOffIcon
-                    sx={{
-                      fontSize: "25px",
-                      [i18n.language === "ar" ? "ml" : "mr"]: 1,
-                    }}
-                  />
-                  <p>{t("dedicatedSupport.points.privacy")}</p>
-                </li>
-              </ul>
-              <a
-                href="#"
-                className="btn"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                }}
-                dir="ltr"
-              >
-                <i className="fas fa-phone-alt"></i>
-                <span dir="ltr">{t("dedicatedSupport.phoneNumber")}</span>
-              </a>
+                <p className="mb-40">{t("dedicatedSupport.description")}</p>
+                <ul className="mb-30">
+                  <li>
+                    <GppGoodIcon
+                      sx={{
+                        fontSize: "25px",
+                        [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                      }}
+                    />
+                    <p>{t("dedicatedSupport.points.security")}</p>
+                  </li>
+                  <li>
+                    <ThumbUpAltIcon
+                      sx={{
+                        fontSize: "25px",
+                        [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                      }}
+                    />
+                    <p>{t("dedicatedSupport.points.trust")}</p>
+                  </li>
+                  <li>
+                    <VisibilityOffIcon
+                      sx={{
+                        fontSize: "25px",
+                        [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                      }}
+                    />
+                    <p>{t("dedicatedSupport.points.privacy")}</p>
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  className="btn"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                  dir="ltr"
+                >
+                  <i className="fas fa-phone-alt"></i>
+                  <span dir="ltr">{t("dedicatedSupport.phoneNumber")}</span>
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="col-xl-5 col-lg-5 col-md-8 col-sm-10">
-            {/* about-img */}
-            <div className="about-img d-flex align-items-center justify-content-center">
-              <img
-                style={{ width: "80%" }}
-                src="assets/img/gallery/about2.png"
-                alt="Support"
-              />
+            <div className="col-xl-5 col-lg-5 col-md-8 col-sm-10">
+              {/* about-img */}
+              <div className="about-img d-flex align-items-center justify-content-center">
+                <img
+                  style={{ width: "80%" }}
+                  src="assets/img/gallery/about2.png"
+                  alt="Support"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 };
 

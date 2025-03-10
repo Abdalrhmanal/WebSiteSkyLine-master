@@ -8,7 +8,7 @@ import CampaignOutlinedIcon from "@mui/icons-material/CampaignOutlined";
 import { motion } from "motion/react";
 import MobileFriendlyIcon from "@mui/icons-material/MobileFriendly";
 import { useTranslation } from "react-i18next";
-const secondaryTheme = "#F067FF";
+const secondaryTheme = "#00cffd";
 interface Feature {
   key: string;
   icon: React.ReactNode;
@@ -88,7 +88,14 @@ const FeaturesSection: React.FC = () => {
         <div className="row justify-content-center">
           <div className="col-xl-12">
             <div className="section-tittle text-center mb-105">
-              <h2>{t("services")}</h2>
+              <h2
+                style={{
+                  color: "#00cffd",
+                  textAlign: "center",
+                }}
+              >
+                {t("services")}
+              </h2>
             </div>
           </div>
         </div>
@@ -104,12 +111,32 @@ const FeaturesSection: React.FC = () => {
               viewport={{ once: true, amount: 0.5 }}
             >
               <div className="single-cat">
-                <div className="cat-cap">
-                  <div className="cat-icon text-center">{feature.icon}</div>
+                <div
+                  className="cat-cap"
+                  style={{
+                    // border: "1px solid #eeeeeef0",
+                    padding: "16px",
+                    minHeight: "250px",
+                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.09)",
+                  }}
+                >
+                  <div className="text-center">{feature.icon}</div>
                   <h5 className="text-center">
-                    <div>{t(`features.${feature.key}.title`)}</div>
+                    <div
+                      style={{
+                        color: "#000000f0",
+                      }}
+                    >
+                      {t(`features.${feature.key}.title`)}
+                    </div>
                   </h5>
-                  <p className="text-center">
+                  <p
+                    className="text-center"
+                    style={{
+                      color: "#00000080",
+                      fontSize: "18px",
+                    }}
+                  >
                     {t(`features.${feature.key}.description`)}
                   </p>
                 </div>
@@ -117,21 +144,29 @@ const FeaturesSection: React.FC = () => {
             </motion.div>
           ))}
         </div>
-        <div className="section-tittle text-center mb-50">
-          <h2>{t("service2")}</h2>
+
+        <div className="section-tittle text-center mb-50 mt-70">
+          <h2
+            style={{
+              color: "#000000",
+              textAlign: textAlignValue,
+            }}
+          >
+            {t("service2")}
+          </h2>
         </div>
-        <div style={{ color: "#A5A7C5" }}>
-          <p style={{ color: "#A5A7C5", fontSize: "20px" }}>
+        <div>
+          <p style={{ color: "#00000080", fontSize: "20px" }}>
             {t("company.about")}
           </p>
-          <p style={{ color: "#A5A7C5", fontSize: "20px" }}>
+          <p style={{ color: "#00000080", fontSize: "20px" }}>
             {t("company.commitment")}
           </p>
           <ol
             style={{
               listStyleType: "inherit",
               lineHeight: 2,
-              color: "#fff",
+              color: "#000000f0",
               paddingBottom: "50px",
             }}
           >
