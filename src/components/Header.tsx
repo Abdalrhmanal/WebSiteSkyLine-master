@@ -1,20 +1,15 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-
 import SplitButton from "./languageButtom";
 
+const menuItems = [
+  { name: "Home", path: "/" },
+  { name: "Business Gallery", path: "/business-gallery" },
+  { name: "Contact", path: "/contact" },
+];
 
-interface MenuItem {
-  name: string;
-  path: string;
-}
-
-interface HeaderProps {
-  menuItems: MenuItem[];
-}
-
-const Header: React.FC<HeaderProps> = ({ menuItems }) => {
+const Header: React.FC = () => {
   const handleScrollToSection = (e: React.MouseEvent, path: string) => {
     if (path.includes("#")) {
       e.preventDefault();
@@ -32,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
   };
 
   const { t } = useTranslation();
- 
+
   return (
     <header>
       <div className="header-area header-transparent">
@@ -53,7 +48,7 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
                   </div>
                 </div>
 
-                <div className="col-6 d-flex justify-content-end align-items-center  d-lg-none">
+                <div className="col-6 d-flex justify-content-end align-items-center d-lg-none">
                   <button
                     className="mobile-menu-toggle"
                     style={{
@@ -119,7 +114,9 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
                           {item.path.includes("#") ? (
                             <a
                               href={item.path}
-                              onClick={e => handleScrollToSection(e, item.path)}
+                              onClick={(e) =>
+                                handleScrollToSection(e, item.path)
+                              }
                             >
                               {t(
                                 `menu.${item.name

@@ -32,30 +32,50 @@ const DedicatedSupportSection: React.FC = () => {
               <p className="mb-40">{t("dedicatedSupport.description")}</p>
               <ul className="mb-30">
                 <li>
-                  <GppGoodIcon sx={{ fontSize: "25px", mr: 1 }} />
+                  <GppGoodIcon
+                    sx={{
+                      fontSize: "25px",
+                      [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                    }}
+                  />
                   <p>{t("dedicatedSupport.points.security")}</p>
                 </li>
                 <li>
-                  <ThumbUpAltIcon sx={{ fontSize: "25px", mr: 1 }} />
+                  <ThumbUpAltIcon
+                    sx={{
+                      fontSize: "25px",
+                      [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                    }}
+                  />
                   <p>{t("dedicatedSupport.points.trust")}</p>
                 </li>
                 <li>
-                  <VisibilityOffIcon sx={{ fontSize: "25px", mr: 1 }} />
+                  <VisibilityOffIcon
+                    sx={{
+                      fontSize: "25px",
+                      [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                    }}
+                  />
                   <p>{t("dedicatedSupport.points.privacy")}</p>
                 </li>
               </ul>
               <a
                 href="#"
                 className="btn"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+                dir="ltr"
               >
-                <i className="fas fa-phone-alt"></i>{" "}
-                {t("dedicatedSupport.phoneNumber")}
+                <i className="fas fa-phone-alt"></i>
+                <span dir="ltr">{t("dedicatedSupport.phoneNumber")}</span>
               </a>
             </div>
           </div>
           <div className="col-xl-5 col-lg-5 col-md-8 col-sm-10">
             {/* about-img */}
-            <div className="about-img">
+            <div className="about-img d-flex align-items-center justify-content-center">
               <img
                 style={{ width: "80%" }}
                 src="assets/img/gallery/about2.png"

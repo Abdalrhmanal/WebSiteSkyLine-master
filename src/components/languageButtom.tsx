@@ -40,7 +40,7 @@ export default function SplitButton() {
   };
 
   const handleToggle = () => {
-    setOpen(prevOpen => !prevOpen);
+    setOpen((prevOpen) => !prevOpen);
   };
 
   const handleClose = (event: Event) => {
@@ -56,10 +56,7 @@ export default function SplitButton() {
 
   return (
     <React.Fragment>
-      <Box
-        mx={1}
-        sx={{ direction: "ltr" }}
-      >
+      <Box mx={1} sx={{ direction: "ltr" }}>
         <ButtonGroup
           variant="outlined"
           ref={anchorRef}

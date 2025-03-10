@@ -55,11 +55,18 @@ const socialMediaSites = [
     path: "https://x.com/",
   },
 ];
-const Footer: React.FC<{ quickLinks: { name: string; to: string }[] }> = ({
-  quickLinks,
-}) => {
-/*   const [email, setEmail] = useState("");
- */  const { t, i18n } = useTranslation();
+
+const Footer: React.FC = () => {
+  const { t, i18n } = useTranslation();
+
+  const quickLinks = [
+    { name: t("footer.quickLinksList.0.name"), to: "/#aboutUs" },
+    { name: t("footer.quickLinksList.1.name"), to: "/business-gallery" },
+    { name: t("footer.quickLinksList.2.name"), to: "/#help" },
+    { name: t("footer.quickLinksList.3.name"), to: "/#services" },
+    { name: t("footer.quickLinksList.4.name"), to: "/contact" },
+  ];
+  /*   const [email, setEmail] = useState("");*/
 
   /* const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -111,9 +118,7 @@ const Footer: React.FC<{ quickLinks: { name: string; to: string }[] }> = ({
                   </div>
                   <div className="footer-form">
                     <div id="mc_embed_signup">
-                      <h3 style={{ color: "#fff", marginBottom: "10px" }}>
-                        
-                      </h3>
+                      <h3 style={{ color: "#fff", marginBottom: "10px" }}></h3>
                     </div>
                   </div>
                 </div>
@@ -140,10 +145,7 @@ const Footer: React.FC<{ quickLinks: { name: string; to: string }[] }> = ({
                     <h4>{t("footer.ourServices")}</h4>
                     <ul>
                       {services.map((service, index) => (
-                        <li
-                          key={index}
-                          style={{ color: "#C2C5DB" }}
-                        >
+                        <li key={index} style={{ color: "#C2C5DB" }}>
                           {service.name}
                         </li>
                       ))}
@@ -154,19 +156,25 @@ const Footer: React.FC<{ quickLinks: { name: string; to: string }[] }> = ({
 
               <div className="col-xl-2 col-lg-3 col-md-4 col-sm-5">
                 <div className="single-footer-caption mb-50">
-                  <div
-                    className="footer-tittle"
-                    style={{ width: "250px" }}
-                  >
+                  <div className="footer-tittle" style={{ width: "250px" }}>
                     <h4>{t("footer.contactUs")}</h4>
                     <ul>
                       {contactInfo.map((contact, index) => (
                         <li key={index}>
-                          {contact.icon}
+                          <span
+                            style={{
+                              [i18n.language === "en"
+                                ? "margin-right"
+                                : "margin-left"]: "10px",
+                            }}
+                          >
+                            {contact.icon}
+                          </span>
                           <a
                             href={contact.to}
                             target="_blank"
                             rel="noopener noreferrer"
+                            dir="ltr"
                           >
                             {contact.text}
                           </a>
@@ -208,16 +216,9 @@ const Footer: React.FC<{ quickLinks: { name: string; to: string }[] }> = ({
                   <div className="footer-copy-right text-center">
                     <p>
                       Copyright &copy;{new Date().getFullYear()} All rights
-                      reserved {" "}
-                      <i
-                        className="fa fa-heart"
-                        aria-hidden="true"
-                      ></i>{" "}
-                      {" "}
-                      <a
-                        href="#"
-                        rel="noopener noreferrer"
-                      >
+                      reserved{" "}
+                      <i className="fa fa-heart" aria-hidden="true"></i>{" "}
+                      <a href="#" rel="noopener noreferrer">
                         SkyLine
                       </a>
                     </p>

@@ -82,7 +82,7 @@ const FeaturesSection: React.FC = () => {
     <section
       className="team-area section-bg1"
       id="services"
-      style={{ textAlign: textAlignValue }}
+      style={{ textAlign: textAlignValue, paddingTop: "100px" }}
     >
       <div className="container ">
         <div className="row justify-content-center">
@@ -104,12 +104,14 @@ const FeaturesSection: React.FC = () => {
               viewport={{ once: true, amount: 0.5 }}
             >
               <div className="single-cat">
-                <div className="cat-icon">{feature.icon}</div>
                 <div className="cat-cap">
-                  <h5>
+                  <div className="cat-icon text-center">{feature.icon}</div>
+                  <h5 className="text-center">
                     <div>{t(`features.${feature.key}.title`)}</div>
                   </h5>
-                  <p>{t(`features.${feature.key}.description`)}</p>
+                  <p className="text-center">
+                    {t(`features.${feature.key}.description`)}
+                  </p>
                 </div>
               </div>
             </motion.div>

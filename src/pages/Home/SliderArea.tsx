@@ -13,7 +13,9 @@ const SliderArea: React.FC = () => {
     deleteSpeed: 50,
     delaySpeed: 1000,
   });
-  const [textAlignValue, setTextAlignValue] = useState<'left' | 'right'>('left');
+  const [textAlignValue, setTextAlignValue] = useState<"left" | "right">(
+    "left"
+  );
 
   // استخدام useEffect لمراقبة التغيرات في اللغة وتحديث الاتجاه (direction)
   useEffect(() => {
@@ -30,14 +32,11 @@ const SliderArea: React.FC = () => {
 
   return (
     <div className="slider-area slider-bg">
-      <div
-        className="slider-active"
-        style={{ textAlign: textAlignValue }}
-      >
+      <div className="slider-active" style={{ textAlign: textAlignValue }}>
         {/* Single Slider */}
         <div className="single-slider d-flex align-items-center slider-height">
           <div className="container">
-            <div className="row align-items-center justify-content-center">
+            <div className="row align-items-center justify-content-between">
               <motion.div
                 className="col-xl-5 col-lg-5 col-md-9"
                 initial={{ x: -500 }}
@@ -45,17 +44,22 @@ const SliderArea: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
               >
-                <div className="hero__caption mt-70 pt-5 ">
-                  <span
+                <div className="hero__caption mt-30 pt-5">
+                  <p
                     data-animation="fadeInLeft"
                     data-delay=".3s"
+                    style={{
+                      textAlign: i18n.language === "ar" ? "right" : "left",
+                      marginTop: "50px",
+                    }}
                   >
                     {t("slider.description")}
-                  </span>
-                  <div className="min-h ">
+                  </p>
+                  <div className="min-h">
                     <h1
                       style={{
                         fontSize: "40px",
+                        textAlign: i18n.language === "ar" ? "right" : "left",
                       }}
                       dangerouslySetInnerHTML={{
                         __html: highlightText(text),
@@ -65,6 +69,9 @@ const SliderArea: React.FC = () => {
                   <p
                     data-animation="fadeInLeft"
                     data-delay=".8s"
+                    style={{
+                      textAlign: i18n.language === "ar" ? "right" : "left",
+                    }}
                   >
                     {t("slider.paragraph")}
                   </p>
@@ -84,7 +91,7 @@ const SliderArea: React.FC = () => {
               </motion.div>
 
               <motion.div
-                className="col-xl-6 col-lg-6"
+                className="col-xl-6 col-lg-6 flex-center-end"
                 initial={{ x: 500 }}
                 animate={{ x: 0 }}
                 transition={{ duration: 1 }}
@@ -99,10 +106,11 @@ const SliderArea: React.FC = () => {
                     transition={{
                       type: "spring",
                       stiffness: 100,
-                      damping: 20,
+                      damping: 30,
                       repeat: Infinity,
                       repeatType: "reverse",
                       duration: 2,
+                      // repeatDelay: 0.1,
                     }}
                   />
                 </div>

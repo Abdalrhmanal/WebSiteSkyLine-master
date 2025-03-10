@@ -21,7 +21,7 @@ const AboutSection: React.FC = () => {
         <div className="row align-items-center justify-content-between">
           <div className="col-xl-5 col-lg-5 col-md-8 col-sm-10">
             {/* about-img */}
-            <div className="about-img">
+            <div className="about-img d-flex align-items-center justify-content-center">
               <img
                 style={{ width: "80%" }}
                 src="assets/img/gallery/about1.png"
@@ -41,17 +41,30 @@ const AboutSection: React.FC = () => {
               <p className="mb-40">{t("about.description")}</p>
               <ul>
                 <li>
-                  <SettingsOutlinedIcon sx={{ fontSize: "25px", mr: 1 }} />
+                  <SettingsOutlinedIcon
+                    sx={{
+                      fontSize: "25px",
+                      [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                    }}
+                  />
                   <p>{t("about.points.systemDevelopment")}</p>
                 </li>
                 <li>
                   <StackedBarChartOutlinedIcon
-                    sx={{ fontSize: "25px", mr: 1 }}
+                    sx={{
+                      fontSize: "25px",
+                      [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                    }}
                   />
                   <p>{t("about.points.managementEfficiency")}</p>
                 </li>
                 <li>
-                  <MemoryOutlinedIcon sx={{ fontSize: "25px", mr: 1 }} />
+                  <MemoryOutlinedIcon
+                    sx={{
+                      fontSize: "25px",
+                      [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                    }}
+                  />
                   <p>{t("about.points.aiOptimization")}</p>
                 </li>
               </ul>

@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useTranslation } from "react-i18next";
+import i18n from "../../i18n";
 
 type FormData = {
   message: string;
@@ -19,7 +20,7 @@ const ContactForm: React.FC = () => {
     reset,
   } = useForm<FormData>();
 
-  const onSubmit: SubmitHandler<FormData> = async data => {
+  const onSubmit: SubmitHandler<FormData> = async (data) => {
     const requestData = {
       access_key: "99e963cc-8628-41ac-9978-871a879f1530",
       name: data.name,
@@ -75,7 +76,9 @@ const ContactForm: React.FC = () => {
                   placeholder={t("contact.message")}
                   name="message"
                 />
-                {errors.message && <span>{errors.message.message}</span>}
+                {errors.message && (
+                  <span style={{ color: "red" }}>{errors.message.message}</span>
+                )}
               </div>
             </div>
             <div className="col-sm-6">
@@ -86,7 +89,9 @@ const ContactForm: React.FC = () => {
                   {...register("name", { required: t("contact.name") })}
                   placeholder={t("contact.name")}
                 />
-                {errors.name && <span>{errors.name.message}</span>}
+                {errors.name && (
+                  <span style={{ color: "red" }}>{errors.name.message}</span>
+                )}
               </div>
             </div>
             <div className="col-sm-6">
@@ -104,7 +109,9 @@ const ContactForm: React.FC = () => {
                   })}
                   placeholder={t("contact.email.required")}
                 />
-                {errors.email && <span>{errors.email.message}</span>}
+                {errors.email && (
+                  <span style={{ color: "red" }}>{errors.email.message}</span>
+                )}
               </div>
             </div>
             <div className="col-12">
@@ -115,7 +122,9 @@ const ContactForm: React.FC = () => {
                   {...register("subject", { required: t("contact.subject") })}
                   placeholder={t("contact.subject")}
                 />
-                {errors.subject && <span>{errors.subject.message}</span>}
+                {errors.subject && (
+                  <span style={{ color: "red" }}>{errors.subject.message}</span>
+                )}
               </div>
             </div>
           </div>
@@ -129,9 +138,15 @@ const ContactForm: React.FC = () => {
           </div>
         </form>
       </div>
+
       <div className="col-lg-3 offset-lg-1">
         <div className="media contact-info">
-          <span className="contact-info__icon">
+          <span
+            className="contact-info__icon"
+            style={{
+              [i18n.language === "en" ? "margin-right" : "margin-left"]: 12,
+            }}
+          >
             <i className="ti-home"></i>
           </span>
           <div className="media-body">
@@ -140,15 +155,21 @@ const ContactForm: React.FC = () => {
           </div>
         </div>
         <div className="media contact-info">
-          <span className="contact-info__icon">
+          <span
+            className="contact-info__icon"
+            style={{
+              [i18n.language === "en" ? "margin-right" : "margin-left"]: 12,
+            }}
+          >
             <i className="ti-tablet"></i>
           </span>
           <div className="media-body">
             <h3>
               <a
-                onMouseEnter={e => (e.currentTarget.style.color = "#F067FF")}
-                onMouseLeave={e => (e.currentTarget.style.color = "")}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#F067FF")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "")}
                 href="https://wa.me/+31637718553"
+                dir="ltr"
               >
                 {t("contact.phone.number")}
               </a>
@@ -157,15 +178,20 @@ const ContactForm: React.FC = () => {
           </div>
         </div>
         <div className="media contact-info">
-          <span className="contact-info__icon">
+          <span
+            className="contact-info__icon"
+            style={{
+              [i18n.language === "en" ? "margin-right" : "margin-left"]: 12,
+            }}
+          >
             <i className="ti-email"></i>
           </span>
           <div className="media-body">
             <h3>
               <a
                 href="mailto:skyline6710@gmail.com"
-                onMouseEnter={e => (e.currentTarget.style.color = "#F067FF")}
-                onMouseLeave={e => (e.currentTarget.style.color = "")}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#F067FF")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "")}
               >
                 {t("contact.email_contact.email")}
               </a>
