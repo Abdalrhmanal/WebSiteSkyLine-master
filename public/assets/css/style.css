@@ -171,9 +171,9 @@ a:focus,
   text-decoration: none;
   outline: none;
 }
-a {
+/* a {
   color: #635c5c;
-}
+} */
 a:hover {
   color: #fff;
 }
@@ -185,7 +185,7 @@ a:hover,
 }
 a,
 button {
-  color: #00cffd;
+  /* color: #00cffd; */
   outline: medium none;
 }
 button:focus,
@@ -2038,7 +2038,7 @@ hr {
   background-repeat: no-repeat;
 }
 .section-bg1 {
-  background: #fff;
+  background: #eaeaea;
 }
 .white-bg {
   background: #ffffff;
@@ -2186,7 +2186,6 @@ hr {
   }
 }
 .main-header .main-menu ul li a {
-  color: #fff;
   font-weight: 400;
   padding: 12px 2px;
   display: block;
@@ -2203,7 +2202,7 @@ hr {
   content: "";
   position: absolute;
   width: 0;
-  bottom: 35px;
+  bottom: 10px;
   right: 5px;
   left: -5px;
   height: 1px;
@@ -2325,7 +2324,7 @@ hr {
   position: unset !important;
 }
 .header-sticky.sticky-bar {
-  background: #000;
+  background: #041742;
 }
 .header-sticky.sticky-bar.sticky .main-menu ul li a {
   padding: 20px 20px !important;
@@ -4949,7 +4948,7 @@ form.search-box .input-form .search-form button,
   background: #a077ff;
   background: -moz-linear-gradient(top, #a077ff 0%, #ef67ff 100%);
   background: -webkit-linear-gradient(top, #a077ff 0%, #ef67ff 100%);
-  background: linear-gradient(to bottom, #a077ff 0%, #ef67ff 100%);
+  background: linear-gradient(to bottom, #041742 0%, #08b1d6 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a077ff', endColorstr='#ef67ff',GradientType=0 );
 }
 .btn::before {

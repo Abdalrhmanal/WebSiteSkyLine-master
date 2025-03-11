@@ -40,9 +40,10 @@ const Header: React.FC = () => {
                     className="mobile-menu-toggle"
                     style={{
                       background: "none",
-                      color: "#fff",
+                      color: "#eaeaea",
                       border: "none",
                       fontSize: "30px",
+                      zIndex: 999999999,
                     }}
                     onClick={toggleMobileMenu}
                   >
@@ -58,7 +59,7 @@ const Header: React.FC = () => {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      padding: "10px 0",
+                      padding: "15px 0",
                     }}
                     className="logo"
                   >
@@ -66,7 +67,7 @@ const Header: React.FC = () => {
                       <img
                         src="assets/img/logo/logo.png"
                         alt="Logo"
-                        width={"100px"}
+                        width={"80px"}
                       />
                     </Link>
                   </div>
@@ -82,7 +83,7 @@ const Header: React.FC = () => {
                             <li key={index}>
                               <Link
                                 style={{
-                                  color: "#fff",
+                                  color: "#eaeaea",
                                   fontWeight: "bold",
                                   fontSize: "22px",
                                 }}
@@ -111,7 +112,7 @@ const Header: React.FC = () => {
                       isMobileMenuOpen ? "open" : ""
                     }`}
                     style={{
-                      background: "#00cffd0a",
+                      background: "#eaeaea",
                       maxHeight: isMobileMenuOpen ? "300px" : "0",
                       transition: "max-height 0.5s ease-out",
                       overflow: "hidden",
@@ -119,6 +120,7 @@ const Header: React.FC = () => {
                       fontWeight: "bold",
                       fontSize: "22px",
                       textAlign: `${i18n.dir() === "rtl" ? "right" : "left"}`,
+                      zIndex: 1100202030,
                     }}
                   >
                     <ul style={{ padding: "15px 30px" }}>
@@ -127,6 +129,7 @@ const Header: React.FC = () => {
                           key={index}
                           style={{
                             padding: "15px 0",
+                            color: "#121212",
                           }}
                         >
                           {item.path.includes("#") ? (
@@ -135,6 +138,7 @@ const Header: React.FC = () => {
                               onClick={(e) =>
                                 handleScrollToSection(e, item.path)
                               }
+                              style={{ color: "#041742" }}
                             >
                               {t(
                                 `menu.${item.name
@@ -143,7 +147,7 @@ const Header: React.FC = () => {
                               )}
                             </a>
                           ) : (
-                            <Link to={item.path}>
+                            <Link to={item.path} style={{ color: "#041742" }}>
                               {t(
                                 `menu.${item.name
                                   .toLowerCase()

@@ -65,8 +65,8 @@ export default function SplitButton() {
           <Button
             onClick={handleClick}
             sx={{
-              border: "1px solid #00cffd",
-              color: "#fff",
+              border: "1px solid #08b1d6",
+              color: "#eaeaea",
               textTransform: "capitalize",
               fontSize: "16px",
               px: { xs: 0.2, sm: 3 },
@@ -82,8 +82,8 @@ export default function SplitButton() {
             aria-haspopup="menu"
             onClick={handleToggle}
             sx={{
-              border: "1px solid #00cffd",
-              color: "#fff",
+              border: "1px solid #08b1d6",
+              color: "#eaeaea",
               px: { xs: 0.2, sm: 1 },
             }}
           >
@@ -92,7 +92,7 @@ export default function SplitButton() {
         </ButtonGroup>
 
         <Popper
-          sx={{ zIndex: 1, color: "red" }}
+          sx={{}}
           open={open}
           anchorEl={anchorRef.current}
           role={undefined}
@@ -105,13 +105,17 @@ export default function SplitButton() {
               style={{
                 transformOrigin:
                   placement === "bottom" ? "center top" : "center bottom",
-                color: "#00cffd",
+                color: "#08b1d6",
 
-                background: "rgb(255,255,255,.1a)",
-                fontSize: "16px",
+                background: "rgb(255,255,255,.fa)",
+                fontSize: "18px",
               }}
             >
-              <Paper>
+              <Paper
+                sx={{
+                  background: "#eaeaea",
+                }}
+              >
                 <ClickAwayListener onClickAway={handleClose}>
                   <MenuList
                     id="split-button-menu"
@@ -127,7 +131,11 @@ export default function SplitButton() {
                         key={option}
                         selected={index === selectedIndex}
                         onClick={() => handleMenuItemClick(index)}
-                        sx={{ fontSize: "18px" }}
+                        sx={{
+                          fontSize: "18px",
+                          color: "#08b1d6",
+                          fontWeight: "500",
+                        }}
                       >
                         {option}
                       </MenuItem>

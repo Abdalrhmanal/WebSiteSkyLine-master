@@ -7,19 +7,22 @@ import Contact from "./pages/Contact/Contact.tsx";
 import BusinessGallery from "./pages/BusinessGallery/BusinessGallery.tsx";
 import Preloader from "./components/Preloader.tsx";
 import "./index.css";
+import { ThemeContextProvider } from "./theme/ThemeContext";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Preloader />
+    <ThemeContextProvider>
+      <Preloader />
 
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="Business-Gallery" element={<BusinessGallery />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route index element={<Home />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="Business-Gallery" element={<BusinessGallery />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeContextProvider>
   </StrictMode>
 );

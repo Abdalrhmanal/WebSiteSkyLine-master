@@ -8,7 +8,7 @@ import CampaignOutlinedIcon from "@mui/icons-material/CampaignOutlined";
 import { motion } from "motion/react";
 import MobileFriendlyIcon from "@mui/icons-material/MobileFriendly";
 import { useTranslation } from "react-i18next";
-const secondaryTheme = "#00cffd";
+
 interface Feature {
   key: string;
   icon: React.ReactNode;
@@ -17,49 +17,37 @@ interface Feature {
 const features: Feature[] = [
   {
     key: "ai",
-    icon: (
-      <MemoryOutlinedIcon sx={{ fontSize: 70, color: secondaryTheme, pb: 3 }} />
-    ),
+    icon: <MemoryOutlinedIcon sx={{ fontSize: 70, color: "#08b1d6", pb: 3 }} />,
   },
   {
     key: "automated",
     icon: (
-      <SettingsOutlinedIcon
-        sx={{ fontSize: 70, color: secondaryTheme, pb: 3 }}
-      />
+      <SettingsOutlinedIcon sx={{ fontSize: 70, color: "#08b1d6", pb: 3 }} />
     ),
   },
   {
     key: "cloud",
-    icon: (
-      <CloudOutlinedIcon sx={{ fontSize: 70, color: secondaryTheme, pb: 3 }} />
-    ),
+    icon: <CloudOutlinedIcon sx={{ fontSize: 70, color: "#08b1d6", pb: 3 }} />,
   },
   {
     key: "security",
-    icon: <SecurityIcon sx={{ fontSize: 70, color: secondaryTheme, pb: 3 }} />,
+    icon: <SecurityIcon sx={{ fontSize: 70, color: "#08b1d6", pb: 3 }} />,
   },
   {
     key: "consulting",
     icon: (
-      <WorkOutlineOutlinedIcon
-        sx={{ fontSize: 70, color: secondaryTheme, pb: 3 }}
-      />
+      <WorkOutlineOutlinedIcon sx={{ fontSize: 70, color: "#08b1d6", pb: 3 }} />
     ),
   },
   {
     key: "marketing",
     icon: (
-      <CampaignOutlinedIcon
-        sx={{ fontSize: 70, color: secondaryTheme, pb: 3 }}
-      />
+      <CampaignOutlinedIcon sx={{ fontSize: 70, color: "#08b1d6", pb: 3 }} />
     ),
   },
   {
     key: "mobile",
-    icon: (
-      <MobileFriendlyIcon sx={{ fontSize: 70, color: secondaryTheme, pb: 3 }} />
-    ),
+    icon: <MobileFriendlyIcon sx={{ fontSize: 70, color: "#08b1d6", pb: 3 }} />,
   },
 ];
 
@@ -90,7 +78,7 @@ const FeaturesSection: React.FC = () => {
             <div className="section-tittle text-center mb-105">
               <h2
                 style={{
-                  color: "#00cffd",
+                  color: "#08b1d6",
                   textAlign: "center",
                 }}
               >
@@ -114,17 +102,18 @@ const FeaturesSection: React.FC = () => {
                 <div
                   className="cat-cap"
                   style={{
-                    // border: "1px solid #eeeeeef0",
+                    // border: "1px solid #fff",
                     padding: "16px",
                     minHeight: "250px",
                     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.09)",
+                    background: "#eee",
                   }}
                 >
                   <div className="text-center">{feature.icon}</div>
                   <h5 className="text-center">
                     <div
                       style={{
-                        color: "#000000f0",
+                        color: "#121212",
                       }}
                     >
                       {t(`features.${feature.key}.title`)}
@@ -133,7 +122,7 @@ const FeaturesSection: React.FC = () => {
                   <p
                     className="text-center"
                     style={{
-                      color: "#00000080",
+                      color: "#777",
                       fontSize: "18px",
                     }}
                   >
@@ -148,7 +137,7 @@ const FeaturesSection: React.FC = () => {
         <div className="section-tittle text-center mb-50 mt-70">
           <h2
             style={{
-              color: "#000000",
+              color: "#041742",
               textAlign: textAlignValue,
             }}
           >
@@ -156,17 +145,17 @@ const FeaturesSection: React.FC = () => {
           </h2>
         </div>
         <div>
-          <p style={{ color: "#00000080", fontSize: "20px" }}>
+          <p style={{ color: "#777", fontSize: "20px" }}>
             {t("company.about")}
           </p>
-          <p style={{ color: "#00000080", fontSize: "20px" }}>
+          <p style={{ color: "#777", fontSize: "20px" }}>
             {t("company.commitment")}
           </p>
           <ol
             style={{
               listStyleType: "inherit",
               lineHeight: 2,
-              color: "#000000f0",
+              color: "#121212",
               paddingBottom: "50px",
             }}
           >

@@ -26,13 +26,16 @@ const SliderArea: React.FC = () => {
   const highlightText = (text: string) => {
     return text.replace(
       "Skyline",
-      "<span style='color: #00cffd;font-size:45px; padding: 0; margin: 0;'>Skyline</span>"
+      "<span style='color: #08b1d6;font-size:45px; padding: 0; margin: 0;'>Skyline</span>"
     );
   };
 
   return (
     <div className="slider-area slider-bg">
-      <div className="slider-active" style={{ textAlign: textAlignValue }}>
+      <div
+        className="slider-active"
+        style={{ textAlign: textAlignValue, backgroundColor: "#041742" }}
+      >
         {/* Single Slider */}
         <div className="single-slider d-flex align-items-center slider-height">
           <div className="container">
@@ -52,6 +55,7 @@ const SliderArea: React.FC = () => {
                       textAlign: i18n.language === "ar" ? "right" : "left",
                       marginTop: "50px",
                       marginBottom: "10px",
+                      color: "#eaeaea",
                     }}
                   >
                     {t("slider.description")}
@@ -61,6 +65,7 @@ const SliderArea: React.FC = () => {
                       style={{
                         fontSize: "40px",
                         textAlign: i18n.language === "ar" ? "right" : "left",
+                        color: "#eaeaea",
                       }}
                       dangerouslySetInnerHTML={{
                         __html: highlightText(text),
@@ -72,12 +77,18 @@ const SliderArea: React.FC = () => {
                     data-delay=".8s"
                     style={{
                       textAlign: i18n.language === "ar" ? "right" : "left",
+                      color: "#eaeaea",
                     }}
                   >
                     {t("slider.paragraph")}
                   </p>
                   {/* Slider btn */}
-                  <div className="slider-btns mb-10">
+                  <div
+                    className="slider-btns mb-10"
+                    style={{
+                      marginBottom: "30px",
+                    }}
+                  >
                     {/* Hero-btn */}
                     <Link
                       data-animation="fadeInLeft"
