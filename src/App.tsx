@@ -8,6 +8,8 @@ import "./App.css";
 const App = () => {
   const { i18n } = useTranslation();
 
+  /* dd */
+  
   useEffect(() => {
     const lang = i18n.language;
     if (lang === "ar") {
