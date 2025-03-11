@@ -157,6 +157,7 @@ const FeaturesSection: React.FC = () => {
               lineHeight: 2,
               color: "#121212",
               paddingBottom: "50px",
+              fontSize: "14px",
             }}
           >
             <li>{t("company.features.ai_integration")}</li>

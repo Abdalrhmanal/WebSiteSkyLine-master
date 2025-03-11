@@ -21,7 +21,7 @@ const GoToWhatsApp: React.FC = () => {
         target="_blank"
         title="whats App "
         href="https://wa.me/+31637718553"
-        style={{ display: "flex" }}
+        style={{ display: "flex", color: "#eaeaea" }}
         // onClick={handleClick}
       >
         <WhatsAppIcon sx={{ fontSize: "35px" }} />

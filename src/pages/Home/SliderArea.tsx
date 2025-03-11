@@ -82,23 +82,23 @@ const SliderArea: React.FC = () => {
                   >
                     {t("slider.paragraph")}
                   </p>
-                  {/* Slider btn */}
-                  <div
-                    className="slider-btns mb-10"
-                    style={{
-                      marginBottom: "30px",
-                    }}
+                </div>
+                {/* Slider btn */}
+                <div
+                  className="slider-btns mb-10"
+                  style={{
+                    marginBottom: "30px",
+                  }}
+                >
+                  {/* Hero-btn */}
+                  <Link
+                    data-animation="fadeInLeft"
+                    data-delay="1s"
+                    to="contact"
+                    className="btn radius-btn"
                   >
-                    {/* Hero-btn */}
-                    <Link
-                      data-animation="fadeInLeft"
-                      data-delay="1s"
-                      to="contact"
-                      className="btn radius-btn"
-                    >
-                      {t("slider.button")}
-                    </Link>
-                  </div>
+                    {t("slider.button")}
+                  </Link>
                 </div>
               </motion.div>
 

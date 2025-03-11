@@ -60,7 +60,14 @@ const ContactForm: React.FC = () => {
     >
       <div className="col-lg-8">
         <div className="col-12">
-          <h2 className="contact-title">{t("contact.title")}</h2>
+          <h2
+            style={{
+              color: "#08b1d6",
+            }}
+            className="contact-title"
+          >
+            {t("contact.title")}
+          </h2>
         </div>
         <form
           className="form-contact contact_form"
@@ -71,6 +78,9 @@ const ContactForm: React.FC = () => {
             <div className="col-12">
               <div className="form-group">
                 <textarea
+                  style={{
+                    borderColor: "#999",
+                  }}
                   className="form-control w-100"
                   {...register("message", { required: t("contact.message") })}
                   placeholder={t("contact.message")}
@@ -84,6 +94,9 @@ const ContactForm: React.FC = () => {
             <div className="col-sm-6">
               <div className="form-group">
                 <input
+                  style={{
+                    borderColor: "#999",
+                  }}
                   className="form-control"
                   type="text"
                   {...register("name", { required: t("contact.name") })}
@@ -97,6 +110,9 @@ const ContactForm: React.FC = () => {
             <div className="col-sm-6">
               <div className="form-group">
                 <input
+                  style={{
+                    borderColor: "#999",
+                  }}
                   className="form-control"
                   type="email"
                   {...register("email", {
@@ -117,6 +133,9 @@ const ContactForm: React.FC = () => {
             <div className="col-12">
               <div className="form-group">
                 <input
+                  style={{
+                    borderColor: "#999",
+                  }}
                   className="form-control"
                   type="text"
                   {...register("subject", { required: t("contact.subject") })}
@@ -145,12 +164,24 @@ const ContactForm: React.FC = () => {
             className="contact-info__icon"
             style={{
               [i18n.language === "en" ? "margin-right" : "margin-left"]: 12,
+              color: "#777",
             }}
           >
-            <i className="ti-home"></i>
+            <i
+              style={{
+                color: "#777",
+              }}
+              className="ti-home"
+            ></i>
           </span>
           <div className="media-body">
-            <h3>{t("contact.address.city")}</h3>
+            <h3
+              style={{
+                color: "#121212",
+              }}
+            >
+              {t("contact.address.city")}
+            </h3>
             <p>{t("contact.address.address")}</p>
           </div>
         </div>
@@ -159,14 +190,23 @@ const ContactForm: React.FC = () => {
             className="contact-info__icon"
             style={{
               [i18n.language === "en" ? "margin-right" : "margin-left"]: 12,
+              color: "#777",
             }}
           >
-            <i className="ti-tablet"></i>
+            <i
+              style={{
+                color: "#777",
+              }}
+              className="ti-tablet"
+            ></i>
           </span>
           <div className="media-body">
             <h3>
               <a
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#F067FF")}
+                style={{
+                  color: "#121212",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#08b1d6")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "")}
                 href="https://wa.me/+31637718553"
                 dir="ltr"
@@ -182,15 +222,24 @@ const ContactForm: React.FC = () => {
             className="contact-info__icon"
             style={{
               [i18n.language === "en" ? "margin-right" : "margin-left"]: 12,
+              color: "#777",
             }}
           >
-            <i className="ti-email"></i>
+            <i
+              style={{
+                color: "#777",
+              }}
+              className="ti-email"
+            ></i>
           </span>
           <div className="media-body">
             <h3>
               <a
+                style={{
+                  color: "#121212",
+                }}
                 href="mailto:skyline6710@gmail.com"
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#F067FF")}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#08b1d6")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "")}
               >
                 {t("contact.email_contact.email")}

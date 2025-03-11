@@ -10,7 +10,7 @@ const DedicatedSupportSection: React.FC = () => {
   const textAlignValue = i18n.dir() === "rtl" ? "right" : "left";
 
   return (
-    <div style={{ background: "#000", padding: "50px 0" }}>
+    <div style={{ background: "#041742", padding: "50px 0" }}>
       <motion.div
         className="about-area1 pb-bottom"
         initial={{ opacity: 0, x: -100 }}
@@ -25,41 +25,70 @@ const DedicatedSupportSection: React.FC = () => {
             >
               <div className="about-caption about-caption3 mb-50">
                 {/* Section Title */}
-                <h2 style={{ fontSize: "35px", color: "#00cffd" }}>
+                <h2 style={{ fontSize: "35px", color: "#08b1d6" }}>
                   {t("dedicatedSupport.title")}
                 </h2>
-                <p className="mb-40">{t("dedicatedSupport.description")}</p>
+                <p
+                  className="mb-40"
+                  style={{
+                    color: "#eaeaea",
+                  }}
+                >
+                  {t("dedicatedSupport.description")}
+                </p>
                 <ul className="mb-30">
                   <li>
                     <GppGoodIcon
                       sx={{
                         fontSize: "25px",
                         [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                        color: "#eaeaea",
                       }}
                     />
-                    <p>{t("dedicatedSupport.points.security")}</p>
+                    <p
+                      style={{
+                        color: "#999",
+                      }}
+                    >
+                      {t("dedicatedSupport.points.security")}
+                    </p>
                   </li>
                   <li>
                     <ThumbUpAltIcon
                       sx={{
                         fontSize: "25px",
                         [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                        color: "#eaeaea",
                       }}
                     />
-                    <p>{t("dedicatedSupport.points.trust")}</p>
+                    <p
+                      style={{
+                        color: "#999",
+                      }}
+                    >
+                      {t("dedicatedSupport.points.trust")}
+                    </p>
                   </li>
                   <li>
                     <VisibilityOffIcon
                       sx={{
                         fontSize: "25px",
                         [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                        color: "#eaeaea",
                       }}
                     />
-                    <p>{t("dedicatedSupport.points.privacy")}</p>
+                    <p
+                      style={{
+                        color: "#999",
+                      }}
+                    >
+                      {t("dedicatedSupport.points.privacy")}
+                    </p>
                   </li>
                 </ul>
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://wa.me/+31637718553"
                   className="btn"
                   style={{
                     display: "flex",

@@ -31,8 +31,8 @@ const PersonalCards = () => {
     setTestimonials(testimonialsWithId);
   }, [t]);
 
-  const primaryTheme = "#2D0A31";
-  const secondaryTheme = "#4c1e51";
+  const primaryTheme = "#041742";
+  const secondaryTheme = "#08b1d6";
 
   return (
     <Box
@@ -41,7 +41,7 @@ const PersonalCards = () => {
         backgroundColor: primaryTheme,
         py: { xs: 5, sm: 7, md: 10 },
         pt: { xs: 10, sm: 12, md: 15 },
-        color: "#fff",
+        color: "#eaeaea",
         direction: "ltr",
       }}
       id="aboutUs"
@@ -62,10 +62,10 @@ const PersonalCards = () => {
             top: "50%",
             left: { md: "3%" },
             zIndex: 3,
-            color: "#fff",
+            color: "#08b1d6",
             transform: "translateY(-50%)",
-            backgroundColor: secondaryTheme,
-            "&:hover": { backgroundColor: "#444" },
+            backgroundColor: "#eaeaea",
+            "&:hover": { backgroundColor: "#eaeaea", color: "#041742" },
             display: { xs: "none", md: "block" },
           }}
         >
@@ -80,10 +80,10 @@ const PersonalCards = () => {
             top: "50%",
             right: { md: "3%" },
             zIndex: 3,
-            color: "#fff",
+            color: "#08b1d6",
             transform: "translateY(-50%)",
-            backgroundColor: secondaryTheme,
-            "&:hover": { backgroundColor: "#444" },
+            backgroundColor: "#eaeaea",
+            "&:hover": { backgroundColor: "#eaeaea", color: "#041742" },
             display: { xs: "none", md: "block" },
           }}
         >
@@ -144,7 +144,7 @@ const PersonalCards = () => {
                     <Typography
                       sx={{
                         fontWeight: "bold",
-                        color: "#fff",
+                        color: "#eaeaea",
                         fontSize: { xs: "16px", sm: "20px" },
                       }}
                     >
@@ -157,7 +157,7 @@ const PersonalCards = () => {
                     mb: { xs: 3, sx: 5 },
                     textAlign: "center",
                     fontSize: { xs: "14px", sm: "16px" },
-                    color: "#fff",
+                    color: "#eaeaea",
                   }}
                 >
                   {testimonial.text}

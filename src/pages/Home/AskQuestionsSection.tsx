@@ -57,7 +57,7 @@ const AskQuestionsSection: React.FC = () => {
             <div className="section-tittle text-center mb-90">
               <h2
                 style={{
-                  color: "#00cffd",
+                  color: "#08b1d6",
                   textAlign: "center",
                 }}
               >
@@ -66,6 +66,7 @@ const AskQuestionsSection: React.FC = () => {
               <p
                 style={{
                   textAlign: textAlignValue,
+                  color: "#666",
                 }}
               >
                 {t("askQuestions.sectionDescription")}
@@ -84,7 +85,7 @@ const AskQuestionsSection: React.FC = () => {
               variants={itemVariants}
             >
               <div className="single-question d-flex mb-50">
-                <span style={{ color: "#000" }}>Q.</span>
+                <span style={{ color: "#121212" }}>Q.</span>
                 <div
                   className="pera"
                   style={{
@@ -92,10 +93,10 @@ const AskQuestionsSection: React.FC = () => {
                       "20px",
                   }}
                 >
-                  <h2 style={{ color: "#000" }}>
+                  <h2 style={{ color: "#121212" }}>
                     {t(`askQuestions.questions.${index}.question`)}
                   </h2>
-                  <p style={{ color: "#00000080" }}>
+                  <p style={{ color: "#666" }}>
                     {t(`askQuestions.questions.${index}.answer`)}
                   </p>
                 </div>
@@ -106,7 +107,7 @@ const AskQuestionsSection: React.FC = () => {
         <div className="row">
           <div className="col-xl-12">
             <div className="more-btn text-center mt-20">
-              <Link to="content" className="btn">
+              <Link to="contant" className="btn">
                 {t("askQuestions.buttonText")}
               </Link>
             </div>

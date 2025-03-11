@@ -10,7 +10,7 @@ const AboutSection: React.FC = () => {
   const textAlignValue = i18n.dir() === "rtl" ? "right" : "left";
 
   return (
-    <div style={{ background: "#000", padding: "50px 0" }}>
+    <div style={{ background: "#041742", padding: "50px 0" }}>
       <motion.div
         className="about-area1 section-padding40"
         initial={{ opacity: 0, x: 100 }}
@@ -37,38 +37,66 @@ const AboutSection: React.FC = () => {
               <div className="about-caption">
                 {/* Section Title */}
                 <div className="section-tittle section-tittle2 mb-30">
-                  <h2 style={{ fontSize: "35px", color: "#00cffd" }}>
+                  <h2 style={{ fontSize: "35px", color: "#08b1d6" }}>
                     {t("about.title")}
                   </h2>
                 </div>
-                <p className="mb-40">{t("about.description")}</p>
+                <p
+                  className="mb-40"
+                  style={{
+                    color: "#eaeaea",
+                  }}
+                >
+                  {t("about.description")}
+                </p>
                 <ul>
                   <li>
                     <SettingsOutlinedIcon
                       sx={{
                         fontSize: "25px",
                         [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                        color: "#eaeaea",
                       }}
                     />
-                    <p>{t("about.points.systemDevelopment")}</p>
+                    <p
+                      style={{
+                        color: "#999",
+                      }}
+                    >
+                      {t("about.points.systemDevelopment")}
+                    </p>
                   </li>
                   <li>
                     <StackedBarChartOutlinedIcon
                       sx={{
                         fontSize: "25px",
                         [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                        color: "#eaeaea",
                       }}
                     />
-                    <p>{t("about.points.managementEfficiency")}</p>
+                    <p
+                      style={{
+                        color: "#999",
+                      }}
+                    >
+                      {t("about.points.managementEfficiency")}
+                    </p>
                   </li>
                   <li>
                     <MemoryOutlinedIcon
                       sx={{
                         fontSize: "25px",
                         [i18n.language === "ar" ? "ml" : "mr"]: 1,
+                        color: "#eaeaea",
                       }}
                     />
-                    <p>{t("about.points.aiOptimization")}</p>
+                    <p
+                      style={{
+                        color: "#999",
+                      }}
+                    >
+                      {t("about.points.aiOptimization")}
+                    </p>
                   </li>
                 </ul>
               </div>

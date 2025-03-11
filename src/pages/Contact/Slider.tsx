@@ -4,7 +4,12 @@ import { useTranslation } from "react-i18next";
 const Slider: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="slider-area slider-bg">
+    <div
+      className="slider-area slider-bg"
+      style={{
+        background: "#041742",
+      }}
+    >
       <div className="single-slider d-flex align-items-center slider-height3">
         <div className="container">
           <div className="row align-items-center justify-content-center">
@@ -13,6 +18,9 @@ const Slider: React.FC = () => {
                 <h1
                   data-animation="fadeInLeft"
                   data-delay=".6s"
+                  style={{
+                    color: "#eaeaea",
+                  }}
                 >
                   {t("contactUs")}
                 </h1>
