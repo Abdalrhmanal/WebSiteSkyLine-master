@@ -34,8 +34,16 @@ const Header: React.FC<HeaderProps> = ({ menuItems }) => {
   const { t } = useTranslation();
  
   return (
-    <header>
-      <div className="header-area header-transparent">
+    <header
+      style={{
+        position: "fixed",
+        top: 0,
+        width: "100%",
+        zIndex: 9999,
+        background: "rgba(4, 23, 66, 0.8)",
+      }}
+    >
+      <div className="header-area">
         <div className="main-header">
           <div className="header-bottom header-sticky">
             <div className="container-fluid">

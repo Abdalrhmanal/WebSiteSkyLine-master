@@ -63,19 +63,20 @@ const features: Feature[] = [
   },
 ];
 
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.5,
+    },
+  }),
+};
+
 const FeaturesSection: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const itemVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.1,
-        duration: 0.5,
-      },
-    }),
-  };
   const textAlignValue = i18n.dir() === "rtl" ? "right" : "left";
 
   return (
@@ -104,10 +105,25 @@ const FeaturesSection: React.FC = () => {
               viewport={{ once: true, amount: 0.5 }}
             >
               <div className="single-cat">
-                <div className="cat-icon">{feature.icon}</div>
-                <div className="cat-cap">
-                  <h5>
-                    <div>{t(`features.${feature.key}.title`)}</div>
+                <div
+                  className="cat-cap"
+                  style={{
+                    // border: "1px solid #fff",
+                    padding: "16px",
+                    minHeight: "250px",
+                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.09)",
+                    background: "#eee",
+                  }}
+                >
+                  <div className="text-center">{feature.icon}</div>
+                  <h5 className="text-center">
+                    <div
+                      style={{
+                        color: "#121212",
+                      }}
+                    >
+                      {t(`features.${feature.key}.title`)}
+                    </div>
                   </h5>
                   <p>{t(`features.${feature.key}.description`)}</p>
                 </div>

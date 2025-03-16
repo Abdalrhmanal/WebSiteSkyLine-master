@@ -8,8 +8,8 @@
   },
   "slider": {
     "title": "Skyline Business Technology Company",
-    "description": "The best company to promote your business and increase your profits",
-    "paragraph": "Enhance your organization with a strong and advanced information and media system that increases your customers' confidence in you. We also help you host your existing system and provide technical support as well.",
+    "description": "Leading Company in Information Technology and Artificial Intelligence",
+    "paragraph": "We develop intelligent software solutions that connect companies to local and global markets, enhancing digital efficiency and accelerating commercial growth.",
     "button": "Start with us"
   },
   "services": "Our Services at Skyline",
@@ -20,8 +20,8 @@
       "description": "Developing advanced AI-powered systems to meet your company's needs and enhance efficiency."
     },
     "automated": {
-      "title": "Automated Systems for Enterprises",
-      "description": "Providing automated systems tailored for organizations and enterprises, ensuring seamless operations."
+      "title": "Administrative Systems Development",
+      "description": "Building integrated solutions for managing operations and resources in organizations."
     },
     "cloud": {
       "title": "Cloud and Technical Services",
@@ -29,19 +29,23 @@
     },
     "security": {
       "title": "Security Testing Team",
-      "description": "Our dedicated security team ensures the safety of your organization’s systems by conducting thorough security tests."
+      "description": "Our dedicated security team ensures the safety of your organization's systems by conducting thorough security tests."
     },
     "consulting": {
-      "title": "Technology Consulting",
+      "title": "Technical Consulting",
       "description": "Expert consulting services from our specialized engineers to drive innovation in your organization."
     },
     "marketing": {
       "title": "Marketing & Media Services",
-      "description": "Providing marketing and media solutions to enhance your company’s visibility and outreach."
+      "description": "Providing marketing and media solutions to enhance your company's visibility and outreach."
     },
     "mobile": {
-      "title": "Mobile Application",
-      "description": "Designing and developing custom mobile applications for iOS and Android platforms to cater to your business needs and improve user engagement."
+      "title": "Web & Mobile Application Development",
+      "description": "Designing and developing customized applications that meet customer needs for web and mobile platforms."
+    },
+    "uiux": {
+      "title": "UI/UX Design",
+      "description": "Providing unique user experiences through professional and modern designs."
     }
   },
   "about": {
@@ -52,6 +56,14 @@
       "managementEfficiency": "Improve management efficiency with intelligent solutions.",
       "aiOptimization": "Leverage AI to optimize resource allocation and decision-making."
     }
+  },
+  "our-vision": {
+    "title": "Our Vision",
+    "content": "is to be a leader in software development and artificial intelligence, contributing to building a smarter and more innovative digital future by providing advanced technology solutions that meet changing market demands."
+  },
+  "our-mission": {
+    "title": "Our Mission",
+    "content": "We are committed to providing advanced software solutions that help businesses and individuals achieve digital transformation and enhance their operational efficiency through innovation and quality."
   },
   "dedicatedSupport": {
     "title": "Building Systems for Enterprises",
@@ -93,7 +105,7 @@
       {
         "role": "System Analysis and Design",
         "text": "Our System Analysis and Design team is highly experienced in analyzing client requirements and developing complex systems that efficiently meet those needs. The team focuses on architectural diagrams for projects and accurately documents all details, making it easier to understand internal processes and workflows. We place great importance on documenting every phase of the project to ensure easy maintenance and testing in the future, which helps speed up development and reduce errors. The team also uses the best tools and techniques for analysis and design to ensure the delivery of flexible, scalable, and manageable solutions.With our commitment to precise analysis and comprehensive documentation, we contribute to building strong and reliable systems that support the client's success and ensure the long-term sustainability of operations",
-        "backgrcolor": "#4C1E51"
+        "backgrcolor": "#0A2358"
       },
       {
         "role": "Backend Team",
@@ -118,7 +130,7 @@
       {
         "role": "UI/UX & Graphic Design Team",
         "text": "Our UI/UX and Graphic Design team brings creative expertise in designing visually appealing interfaces and smooth user experiences that effectively meet client needs. We focus on balancing aesthetics and functionality to ensure an intuitive and user-friendly experience. The team specializes in branding, logo design, and graphic content creation in a professional manner that reflects brand identity. We leverage the latest tools and technologies to ensure modern and responsive designs across different devices. With our passion for creativity and attention to detail, we deliver design solutions that enhance user experience and leave a lasting impression",
-        "backgrcolor": "#5A214D"
+        "backgrcolor": "#3B4F85"
       }
     ]
   },
@@ -157,31 +169,31 @@
         "to": "/ai-powered-systems"
       },
       {
+        "name": "Web & Mobile Development",
+        "to": "/web-mobile-development"
+      },
+      {
+        "name": "UI/UX Design",
+        "to": "/ui-ux-design"
+      },
+      {
+        "name": "Administrative Systems",
+        "to": "/administrative-systems"
+      },
+      {
         "name": "Cloud Services",
         "to": "/cloud-services"
       },
       {
-        "name": "Technical Support",
-        "to": "/technical-support"
-      },
-      {
-        "name": "Technology Consulting",
-        "to": "/technology-consulting"
-      },
-      {
-        "name": "Marketing & Media",
-        "to": "/marketing-media"
-      },
-      {
-        "name": "Mobile Application",
-        "to": ""
+        "name": "Technical Consulting",
+        "to": "/technical-consulting"
       }
     ]
   },
   "Business": " Business Gallery",
   "blog": {
     "fsnCreditStoreTitle": "FSN Credit Store",
-    "fsnCreditStoreDescription": "A store for agents who provide credit recharge and mobile number reactivation services, where an integrated system is automated between FSN and the company’s authorized agents.",
+    "fsnCreditStoreDescription": "A store for agents who provide credit recharge and mobile number reactivation services, where an integrated system is automated between FSN and the company's authorized agents.",
     "tawsellaStarTaxiTitle": "Tawsella StarTaxi management system with applications for user and driver",
     "tawsellaStarTaxiDescription": "Mobile application (driver-user): A request is sent to obtain a service (transportation - car rental) from the company providing the services and enabling the driver to monitor the customer on the map. A chat can also be opened between the driver and the user. Control panel: To manage drivers and users and monitor drivers on the map permanently and effectively, in addition to an accounting section to adjust drivers' financial accounts and generate weekly and on-demand reports. In addition to many scheduled and distinctive operations in the back-end section that the average user does not see. In addition to many other features that support the project and increase its efficiency.",
     "storeTitle": "Store",
@@ -199,8 +211,8 @@
     "subject": "Subject is required",
     "send": "Send",
     "address": {
-      "city": "İstanbul, Turkey.",
-      "address": "Beyoglu, 34433"
+      "city": "Aleppo, Syria",
+      "address": "Headquarters"
     },
     "phone": {
       "number": "+316 377 185 53",
@@ -212,8 +224,8 @@
     }
   },
   "company": {
-    "about": "Our company offers integrated and innovative technological solutions that enhance system efficiency and performance, with a focus on integrating artificial intelligence to analyze data and improve operational processes with high accuracy. We are committed to developing flexible and seamless projects that meet the diverse needs of our clients, while providing modern and elegant user interfaces that ensure a superior and smooth user experience. We provide fast and effective customer support services to ensure uninterrupted operations, with specialized teams responding promptly to customer requests and solving technical issues efficiently. We also place great importance on regular maintenance and continuous updates, ensuring the security and stability of systems and applications.",
-    "commitment": "With our commitment to innovation and modern technologies, we offer smart technological solutions that help our clients grow their businesses and achieve success in an ever-evolving digital world.",
+    "about": "SKYLINE is a leading company in information technology and artificial intelligence, where we harness technology to support business growth and serve the community. We develop intelligent software solutions that connect companies to local and global markets, enhancing digital efficiency and accelerating commercial growth, contributing to digital transformation and driving technological advancement.",
+    "commitment": "We are committed to providing advanced software solutions that help companies and individuals achieve digital transformation and enhance their operational efficiency through innovation and quality.",
     "features": {
       "ai_integration": "--    Integrating artificial intelligence into systems to enhance efficiency and accuracy.",
       "flexible_projects": "--    Developing flexible and seamless projects that meet diverse customer needs.",
@@ -221,7 +233,15 @@
       "customer_support": "--    Providing rapid customer response services and immediate attention to their needs.",
       "maintenance_support": "--    Offering maintenance, technical, and support services to ensure system stability and continuity.",
       "continuous_updates": "--    Continuous updates to ensure the security and efficiency of systems and applications.",
-      "modern_tech": "-- Utilizing modern technologies to deliver innovative solutions that support the growth and success of our clients."
-    }
+      "modern_tech": "--    Utilizing modern technologies to deliver innovative solutions that support the growth and success of our clients."
+    },
+    "values": {
+      "title": "Our Values",
+      "innovation": "Innovation: We are constantly searching for new and innovative solutions to our clients' problems.",
+      "quality": "Quality: We ensure the delivery of high-quality services according to the best international standards.",
+      "transparency": "Transparency: We believe in clarity in our dealings with our clients and partners.",
+      "collaboration": "Collaboration: We work with team spirit to ensure the success of all projects we manage."
+    },
+    "establishment": "Established on June 1, 2024"
   }
 }
