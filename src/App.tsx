@@ -1,25 +1,41 @@
-import { Outlet } from "react-router-dom";
-import BackToTop from "./components/GoToWhatsApp";
-import "./i18n";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Preloader from "./components/Preloader.tsx";
+import Layout from "./pages/AppLayout.tsx";
+import { ThemeContextProvider } from "./theme/ThemeContext";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import "./i18n";
 import "./App.css";
+import { Suspense, lazy } from "react";
+
+const Home = lazy(() => import("./pages/Home/Home.tsx"));
+const Contact = lazy(() => import("./pages/Contact/Contact.tsx"));
+const BusinessGallery = lazy(
+  () => import("./pages/BusinessGallery/BusinessGallery.tsx")
+);
+
 const App = () => {
   const { i18n } = useTranslation();
 
   useEffect(() => {
     const lang = i18n.language;
-    if (lang === "ar") {
-      document.documentElement.setAttribute("dir", "rtl"); // تعيين اتجاه النص من اليمين لليسار
-    } else {
-      document.documentElement.setAttribute("dir", "ltr"); // تعيين اتجاه النص من اليسار لليمين
-    }
+    document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
   }, [i18n.language]);
+
   return (
-    <>
-      <BackToTop />
-      <Outlet />
-    </>
+    <ThemeContextProvider>
+      <BrowserRouter>
+        <Suspense fallback={<Preloader />}>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="contact" element={<Contact />} />
+              <Route path="Business-Gallery" element={<BusinessGallery />} />
+            </Route>
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
+    </ThemeContextProvider>
   );
 };
 
