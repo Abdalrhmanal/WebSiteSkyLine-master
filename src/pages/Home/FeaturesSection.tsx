@@ -51,19 +51,20 @@ const features: Feature[] = [
   },
 ];
 
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.5,
+    },
+  }),
+};
+
 const FeaturesSection: React.FC = () => {
   const { t, i18n } = useTranslation();
-  const itemVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.1,
-        duration: 0.5,
-      },
-    }),
-  };
   const textAlignValue = i18n.dir() === "rtl" ? "right" : "left";
 
   return (
@@ -106,14 +107,16 @@ const FeaturesSection: React.FC = () => {
                     padding: "16px",
                     minHeight: "250px",
                     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.09)",
-                    background: "#eee",
+                    background: "#041742",
+                    borderRadius: "10px",
                   }}
                 >
                   <div className="text-center">{feature.icon}</div>
                   <h5 className="text-center">
                     <div
                       style={{
-                        color: "#121212",
+                        color: "#eaeaea",
+                        fontSize: "22px",
                       }}
                     >
                       {t(`features.${feature.key}.title`)}

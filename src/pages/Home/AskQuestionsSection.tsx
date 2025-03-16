@@ -29,20 +29,21 @@ const questions: Question[] = [
   },
 ];
 
+const itemVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.3,
+      duration: 0.5,
+    },
+  }),
+};
+
 const AskQuestionsSection: React.FC = () => {
   const { t, i18n } = useTranslation();
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 40 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.3,
-        duration: 0.5,
-      },
-    }),
-  };
   const textAlignValue = i18n.dir() === "rtl" ? "right" : "left";
 
   return (
